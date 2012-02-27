@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("rc-bindings.el"
+ (filename . "~/.emacs.d/rc/rc-bindings.el")
+ (front-context-string . "\n\n\n(provide 'RC-")
+ (rear-context-string . "'ecb-activate)\n\n")
+ (position . 2560))
+("projects.org"
+ (filename . "~/org/projects.org")
+ (front-context-string . "* Алгоритмы\n** Ф")
+ (rear-context-string)
+ (position . 1))
+)

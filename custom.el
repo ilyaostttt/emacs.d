@@ -1,0 +1,55 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(auto-save-default nil)
+ '(blink-matching-paren nil)
+ '(c-default-style (quote ((c-mode . "awk") (c++-mode . "awk") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
+ '(custom-enabled-themes (quote (wombat)))
+ '(default-input-method "russian-computer")
+ '(dired-dwim-target t)
+ '(dired-recursive-copies (quote always))
+ '(ecb-layout-name "left1")
+ '(ecb-layout-window-sizes nil)
+ '(ecb-options-version "2.40")
+ '(ecb-tip-of-the-day nil)
+ '(ecb-windows-width 0.25)
+ '(global-hl-line-mode nil)
+ '(global-semantic-decoration-mode t)
+ '(inhibit-startup-screen t)
+ '(initial-scratch-message "")
+ '(make-backup-files nil)
+ '(org-agenda-files (quote ("~/org/projects.org")))
+ '(org-global-properties (quote (("Effort_ALL" . "0:30 1:00 2:00 3:00 4:00 5:00 6:00 7:00"))))
+ '(org-hide-emphasis-markers t)
+ '(org-hide-leading-stars t)
+ '(org-level-color-stars-only t)
+ '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
+ '(scroll-bar-mode nil)
+ '(semantic-mode t)
+ '(show-paren-delay 0.025)
+ '(show-paren-mode t)
+ '(show-paren-style (quote parenthesis))
+ '(sr-speedbar-skip-other-window-p t)
+ '(sr-speedbar-width-x 32)
+ '(tool-bar-mode nil)
+ '(truncate-lines t)
+ '(truncate-partial-width-windows nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cursor ((t (:background "gray"))))
+ '(ecb-default-highlight-face ((t (:background "SlateBlue4"))))
+ '(ecb-history-face ((t (:inherit ecb-default-highlight-face))))
+ '(ecb-method-face ((t (:inherit ecb-default-highlight-face))))
+ '(ecb-tag-header-face ((t (:background "gray26"))))
+ '(highlight ((t (:background "gray20" :foreground "#ffffff" :underline nil))))
+ '(hl-line ((t (:background "gray20" :foreground "white smoke"))))
+ '(org-hide ((t (:foreground "gray14"))))
+ '(org-level-2 ((t (:inherit outline-3))))
+ '(org-level-3 ((t (:inherit outline-6))))
+ '(org-level-4 ((t (:inherit outline-5))))
+ '(show-paren-match ((t (:background "gray14" :foreground "steelblue3")))))
