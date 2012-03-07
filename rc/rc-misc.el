@@ -6,7 +6,9 @@
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
       ido-use-filename-at-point 'guess
-      ido-max-prospects 10)
+      ido-max-prospects 10
+      ido-save-directory-list-file (concat dotfiles-dir ".ido.last")
+      )
 
 (setq visible-bell nil
       fringe-mode (cons 4 0)
@@ -59,6 +61,8 @@
 (setq stack-trace-on-error t)
 
 (setq write-region-inhibit-fsync t)
+
+(setq windmove-wrap-around t)
 
 (provide 'rc-misc)
 
