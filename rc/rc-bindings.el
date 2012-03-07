@@ -1,6 +1,7 @@
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
 (global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-z") 'undo-tree-undo)
+(global-set-key (kbd "C-S-z") 'undo-tree-undo)
 ;; (global-set-key (kbd "C-x C-k") 'ido-kill-buffer)
 
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
@@ -76,6 +77,20 @@
 (global-set-key (kbd "C-/") 'mark-line)
 (global-set-key (kbd "M-#") 'er/expand-region)
 
-(global-set-key (kbd "C-c E") 'ecb-activate)
+(defun toggle-fullscreen (&optional f)
+  (interactive)
+  (let ((current-value (frame-parameter nil 'fullscreen)))
+    (set-frame-parameter nil 'fullscreen
+                         (if (equal 'fullboth current-value)
+                             (if (boundp 'old-fullscreen) old-fullscreen nil)
+                           (progn (setq old-fullscreen current-value)
+                                  'fullboth)))))
+(global-set-key [f11] 'toggle-fullscreen)
+
+;; (global-set-key (kbd "C-c E") 'ecb-activate)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (provide 'rc-bindings)              

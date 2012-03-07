@@ -1,5 +1,5 @@
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/elpa/yasnippet-0.6.1/snippets")
+(yas/load-directory (concat dotfiles-dir "snippets"))
 
 (provide 'rc-yasnippet)
