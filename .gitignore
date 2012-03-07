@@ -1,7 +1,11 @@
 *.elc
 auto-save-list/
-backups/
+loaddefs.el*
+backups/*
 *~
 *#
-session.*
+session*
+tramp
+history
+places
 

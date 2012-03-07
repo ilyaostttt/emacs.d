@@ -47,6 +47,7 @@
  '(ecb-method-face ((t (:inherit ecb-default-highlight-face))))
  '(ecb-tag-header-face ((t (:background "gray26"))))
  '(highlight ((t (:background "gray20" :foreground "#ffffff" :underline nil))))
+ '(font-lock-warning-face ((t (:background "black" :foreground "pink" :bold t))))
  '(hl-line ((t (:background "gray20" :foreground "white smoke"))))
  '(org-hide ((t (:foreground "gray14"))))
  '(org-level-2 ((t (:inherit outline-3))))

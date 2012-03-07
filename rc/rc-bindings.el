@@ -1,20 +1,19 @@
-(global-set-key (kbd "C-M-h") 'backward-kill-word)
-(global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "C-z") 'undo-tree-undo)
-(global-set-key (kbd "C-S-z") 'undo-tree-undo)
+(global-set-key (kbd "C-M-h" ) 'backward-kill-word)
+(global-set-key (kbd "M-/"   ) 'hippie-expand)
+(global-set-key (kbd "C-z"   ) 'undo-tree-undo)
+(global-set-key (kbd "C-S-z" ) 'undo-tree-undo)
 ;; (global-set-key (kbd "C-x C-k") 'ido-kill-buffer)
-
+(global-set-key (kbd "C-x \\") 'align-regexp)
+(global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "\C-r") 'isearch-backward-regexp)
-(global-set-key (kbd "C-M-s") 'isearch-forward)
-(global-set-key (kbd "C-M-r") 'isearch-backward)
-
-(global-set-key (kbd "C-x C-i") 'ido-imenu)
+(global-set-key (kbd "C-s"   ) 'isearch-forward-regexp)
+(global-set-key (kbd "\C-r"  ) 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s" ) 'isearch-forward)
+(global-set-key (kbd "C-M-r" ) 'isearch-backward)
 
 (global-set-key (kbd "C-c j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
@@ -54,7 +53,7 @@
 (global-set-key (kbd "C-c s") 'sr-speedbar-select-window)
 
 (when (fboundp 'windmove-default-keybindings)
-      (windmove-default-keybindings 'super))
+  (windmove-default-keybindings 'super))
 
 (global-set-key (kbd "s-h") 'windmove-left)
 (global-set-key (kbd "s-l") 'windmove-right)
@@ -69,7 +68,6 @@
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 
 (global-set-key (kbd "M-#") 'er/expand-region)
-
 
 (fset 'mark-line
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 67108896 5] 0 "%d")) arg)))
@@ -92,5 +90,11 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(define-key global-map "\C-cc" 'org-capture)
+
+(global-set-key (kbd "C-x C-m") 'anything)
+
+
 
 (provide 'rc-bindings)              
