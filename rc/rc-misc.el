@@ -1,16 +1,14 @@
 (set-default-font "Consolas-12")
 (menu-bar-mode -1)
 
-(ido-mode t)
-(setq ido-enable-prefix nil
-      ido-enable-flex-matching t
-      ido-create-new-buffer 'always
-      ido-use-filename-at-point 'guess
-      ido-max-prospects 10
-      ido-save-directory-list-file (concat dotfiles-dir ".ido.last")
-      )
+(load-theme 'wombat t nil)
 
-(setq visible-bell nil
+(setq auto-save-default nil
+      blink-matching-paren nil
+      default-input-method "russian-computer"
+      dired-dwim-target t
+      dired-recursive-copies 'always
+      visible-bell nil
       fringe-mode (cons 4 0)
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
@@ -22,11 +20,45 @@
       truncate-partial-width-windows nil
       uniquify-buffer-name-style 'forward
       ffap-machine-p-known 'reject
-      whitespace-style '(trailing lines space-before-tab
-                                  face indentation space-after-tab)
+      whitespace-style '(trailing lines space-before-tab face indentation space-after-tab)
       whitespace-line-column 100
       ediff-window-setup-function 'ediff-setup-windows-plain
-      xterm-mouse-mode t)
+      xterm-mouse-mode t
+      global-hl-line-mode nil
+      global-semantic-decoration-mode t
+      inhibit-startup-screen t
+      initial-scratch-message ""
+      make-backup-files nil
+      package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/")))
+      scroll-bar-mode nil
+      semantic-mode t
+      show-paren-delay 0.025
+      show-paren-mode t
+      show-paren-style (quote parenthesis)
+      sr-speedbar-skip-other-window-p t
+      sr-speedbar-width-x 32
+      tool-bar-mode nil
+      truncate-lines t
+      truncate-partial-width-windows nil
+      write-region-inhibit-fsync t
+      stack-trace-on-error t
+      x-select-enable-clipboard t)
+
+(show-paren-mode 1)
+
+(set-face-attribute 'cursor nil :background "grey")
+(set-face-attribute 'highlight nil :background "gray20" :foreground "#ffffff" :underline nil)
+(set-face-attribute 'font-lock-warning-face nil :background "black" :foreground "pink" :bold t)
+;; (set-face-attribute 'hl-line nil :background "gray20" :foreground "white smoke")
+(set-face-attribute 'show-paren-match nil :foreground "steelblue3" :background "grey14")
+
+(ido-mode t)
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess
+      ido-max-prospects 10
+      ido-save-directory-list-file (concat dotfiles-dir ".ido.last"))
 
 (put 'narrow-to-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
@@ -46,8 +78,6 @@
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (concat dotfiles-dir "backups")))))
 
-(setq x-select-enable-clipboard t)
-
 (autoload 'multi-term "multi-term" nil t)
 (autoload 'multi-term-next "multi-term" nil t)
 
@@ -56,15 +86,8 @@
 
 ;; only needed if you use autopair
 (add-hook 'term-mode-hook
-  #'(lambda () (setq autopair-dont-activate t)))
-
-(setq stack-trace-on-error t)
-
-(setq write-region-inhibit-fsync t)
+          #'(lambda () (setq autopair-dont-activate t)))
 
 (setq windmove-wrap-around t)
 
 (provide 'rc-misc)
-
-
-

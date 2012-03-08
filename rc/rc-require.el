@@ -14,10 +14,12 @@
 (require 'smex)
 (smex-initialize)
 
-(require 'ecb-autoloads)
-
 (require 'anything)
 
 (require 'paredit)
+
+;; (require 'slime)
+;; (setq inferior-lisp-program "/usr/bin/sbcl")
+;; (slime-setup)
 
 (provide 'rc-require)
