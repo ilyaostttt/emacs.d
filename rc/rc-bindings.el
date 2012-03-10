@@ -1,3 +1,4 @@
+(global-set-key (kbd "M-%" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
 (global-set-key (kbd "C-z"   ) 'undo-tree-undo)
@@ -46,8 +47,9 @@
                                  (interactive)
                                  (other-window -1)))
 
-(global-set-key (kbd "C-<f12>") 'save-buffers-kill-terminal)
-
+(global-set-key (kbd "C-<f12>") (lambda ()
+                                  (interactive)
+                                  (save-buffers-kill-terminal t)))
 
 (global-set-key (kbd "C-c S") 'sr-speedbar-toggle)
 (global-set-key (kbd "C-c s") 'sr-speedbar-select-window)
@@ -70,7 +72,7 @@
 (global-set-key (kbd "M-#") 'er/expand-region)
 
 (fset 'mark-line
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 67108896 5] 0 "%d")) arg)))
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([1 67108896 5] 0 "%d")) arg)))
 
 (global-set-key (kbd "C-/") 'mark-line)
 (global-set-key (kbd "M-#") 'er/expand-region)
@@ -97,4 +99,4 @@
 
 
 
-(provide 'rc-bindings)              
+(provide 'rc-bindings)

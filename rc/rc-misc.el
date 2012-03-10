@@ -90,4 +90,7 @@
 
 (setq windmove-wrap-around t)
 
+(remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
+(server-start)
+
 (provide 'rc-misc)

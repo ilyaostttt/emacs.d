@@ -1,6 +1,7 @@
 *.elc
 auto-save-list/
 loaddefs.el*
+.ido.last
 backups/*
 *~
 *#

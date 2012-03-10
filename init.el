@@ -19,8 +19,8 @@
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 
-(setq custom-file (concat dotfiles-dir "custom.el"))
-(load custom-file 'noerror)
+;; (setq custom-file (concat dotfiles-dir "custom.el"))
+;; (load custom-file 'noerror)
 
 (require 'rc-require)
 (require 'rc-defuns)
@@ -29,4 +29,6 @@
 (require 'rc-org)
 (require 'rc-registers)
 (require 'rc-lisp)
+(require 'rc-c-mode)
+(require 'rc-ecb)
 (require 'rc-bindings)
