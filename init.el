@@ -11,16 +11,19 @@
 (add-to-list 'load-path (concat dotfiles-dir "rc/"))
 (add-to-list 'load-path package-user-dir)
 
-(dolist (dir (directory-files package-user-dir))
-  (if (not (or (string= "archives" dir)
-               (string= "." dir)
-               (string= ".." dir)))
-      (add-to-list 'load-path (concat package-user-dir dir "/"))))
+(defun add-to-load-path-recursively (dir-to-add)
+ (dolist (dir (directory-files dir-to-add))
+   (if (not (or (string= "archives" dir)
+                (string= "." dir)
+                (string= ".." dir)))
+       (add-to-list 'load-path (concat package-user-dir dir "/")))))
+
+(add-to-load-path-recursively package-user-dir)
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 
-;; (setq custom-file (concat dotfiles-dir "custom.el"))
-;; (load custom-file 'noerror)
+(setq custom-file (concat dotfiles-dir "custom.el"))
+(load custom-file 'noerror)
 
 (require 'rc-require)
 (require 'rc-defuns)

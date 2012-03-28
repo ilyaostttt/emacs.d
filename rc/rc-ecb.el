@@ -2,7 +2,6 @@
 
 (setq ecb-layout-name "left1"
       ecb-layout-window-sizes nil
-      ecb-options-version "2.40"
       ecb-tip-of-the-day nil
       ecb-windows-width 0.25)
 

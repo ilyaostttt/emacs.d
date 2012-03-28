@@ -18,6 +18,7 @@
       mouse-yank-at-point t
       require-final-newline t
       truncate-partial-width-windows nil
+      truncate-lines t
       uniquify-buffer-name-style 'forward
       ffap-machine-p-known 'reject
       whitespace-style '(trailing lines space-before-tab face indentation space-after-tab)
@@ -25,24 +26,24 @@
       ediff-window-setup-function 'ediff-setup-windows-plain
       xterm-mouse-mode t
       global-hl-line-mode nil
-      global-semantic-decoration-mode t
       inhibit-startup-screen t
       initial-scratch-message ""
       make-backup-files nil
       package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/")))
       scroll-bar-mode nil
-      semantic-mode t
       show-paren-delay 0.025
       show-paren-mode t
       show-paren-style (quote parenthesis)
       sr-speedbar-skip-other-window-p t
       sr-speedbar-width-x 32
       tool-bar-mode nil
-      truncate-lines t
-      truncate-partial-width-windows nil
       write-region-inhibit-fsync t
       stack-trace-on-error t
       x-select-enable-clipboard t)
+
+(custom-set-variables
+ '(truncate-lines t)
+ '(truncate-partial-width-windows nil))
 
 (show-paren-mode 1)
 
@@ -88,9 +89,10 @@
 (add-hook 'term-mode-hook
           #'(lambda () (setq autopair-dont-activate t)))
 
-(setq windmove-wrap-around t)
+(setq windmove-wrap-around nil)
 
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
+
 (server-start)
 
 (provide 'rc-misc)

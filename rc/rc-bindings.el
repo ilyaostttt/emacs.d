@@ -1,8 +1,8 @@
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
-(global-set-key (kbd "C-z"   ) 'undo-tree-undo)
-(global-set-key (kbd "C-S-z" ) 'undo-tree-undo)
+(global-set-key (kbd "C-z"   ) 'undo)
+;; (global-set-key (kbd "C-S-z" ) 'undo-tree-undo)
 ;; (global-set-key (kbd "C-x C-k") 'ido-kill-buffer)
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -27,7 +27,7 @@
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-c p") (lambda ()
                                 (interactive)
-                                (prefer-coding-system 'cp866)))
+                                (revert-buffer-with-coding-system 'cp866)))
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -97,6 +97,14 @@
 
 (global-set-key (kbd "C-x C-m") 'anything)
 
+(global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
+(global-set-key (kbd "<XF86Save>") 'save-buffer)
 
+(global-set-key (kbd "C-c h") 'hs-toggle-hiding)
 
+(global-set-key (kbd "C-c w") '(lambda ()
+                                 (interactive)
+                                 (woman (current-word))))
+
+(global-set-key (kbd "C-c b") 'previous-buffer)
 (provide 'rc-bindings)
