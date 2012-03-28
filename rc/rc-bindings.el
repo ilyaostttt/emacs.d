@@ -27,7 +27,7 @@
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-c p") (lambda ()
                                 (interactive)
-                                (prefer-coding-system 'cp866)))
+                                (revert-buffer-with-coding-system 'cp866)))
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -96,6 +96,19 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 (global-set-key (kbd "C-x C-m") 'anything)
+
+(global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
+(global-set-key (kbd "<XF86Save>") 'save-buffer)
+
+(global-set-key (kbd "C-c h") 'hs-toggle-hiding)
+
+(global-set-key (kbd "C-c w") '(lambda ()
+                                 (interactive)
+                                 (woman (current-word))))
+
+;; (global-set-key (kbd "C-c b") 'previous-buffer)
+
+(global-set-key (kbd "<f9>") 'compile)
 
 
 

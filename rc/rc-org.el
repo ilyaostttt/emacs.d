@@ -11,14 +11,6 @@
       org-enforce-todo-dependencies t
       org-agenda-dim-blocked-tasks t)
 
-(add-hook 'org-mode-hook (lambda ()
-                           (set-face-attribute 'org-hide nil :background "grey14" :foreground "grey14")
-                           (set-face-attribute 'org-level-2 nil :inherit 'outline-3)
-                           (set-face-attribute 'org-level-3 nil :inherit 'outline-6)
-                           (set-face-attribute 'org-level-4 nil :inherit 'outline-5)))
-
-
-
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "projects.org") "Tasks")
          "* TODO %?\n")
