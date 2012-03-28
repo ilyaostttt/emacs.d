@@ -106,5 +106,8 @@
                                  (interactive)
                                  (woman (current-word))))
 
-(global-set-key (kbd "C-c b") 'previous-buffer)
+;; (global-set-key (kbd "C-c b") 'previous-buffer)
+
+(global-set-key (kbd "<f9>") 'compile)
+
 (provide 'rc-bindings)
