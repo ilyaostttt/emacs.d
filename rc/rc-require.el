@@ -1,5 +1,3 @@
-
-
 (require 'ace-jump-mode)
 (setq ace-jump-mode-case-sensitive-search nil)
 
@@ -37,5 +35,7 @@
           global-semantic-decoration-mode
           global-semantic-highlight-func-mode
           global-semantic-mru-bookmark-mode))
+
+(require 'org)
 
 (provide 'rc-require)
