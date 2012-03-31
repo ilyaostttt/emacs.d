@@ -93,6 +93,8 @@
 
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
+(global-ede-mode t)
+
 (server-start)
 
 (provide 'rc-misc)

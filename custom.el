@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
  '(blink-matching-paren nil)
- '(c-default-style (quote ((c-mode . "awk") (c++-mode . "awk") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))) t)
+ '(c-default-style (quote ((c-mode . "awk") (c++-mode . "awk") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-read-command nil)
  '(custom-enabled-themes (quote (wombat)))
  '(default-input-method "russian-computer")
@@ -16,6 +16,7 @@
  '(ecb-options-version "2.40")
  '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.25)
+ '(ede-project-directories (quote ("/home/ilya/src/cpp")))
  '(global-hl-line-mode nil)
  '(global-semantic-decoration-mode t)
  '(global-semantic-highlight-func-mode t)

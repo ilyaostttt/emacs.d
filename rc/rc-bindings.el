@@ -109,5 +109,9 @@
 ;; (global-set-key (kbd "C-c b") 'previous-buffer)
 
 (global-set-key (kbd "<f9>") 'compile)
+(global-set-key (kbd "<f10>") 'magit-status)
+(global-set-key (kbd "<f7>") 'ecb-activate)
+(global-set-key (kbd "<f8>") 'ecb-deactivate)
+
 
 (provide 'rc-bindings)

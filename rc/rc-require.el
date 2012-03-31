@@ -38,4 +38,6 @@
 
 (require 'org)
 
+(require 'magit)
+
 (provide 'rc-require)
