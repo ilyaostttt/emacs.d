@@ -3,6 +3,7 @@
              (?m (file . ,(concat dotfiles-dir "rc/rc-misc.el")))
              (?r (file . ,(concat dotfiles-dir "rc/rc-registers.el")))
              (?p (file . ,(concat org-directory "/projects.org")))
+             (?s (file . "/media/transcend/src/"))
              (?o (file . ,org-directory))))
   (set-register (car r) (cadr r)))
 
