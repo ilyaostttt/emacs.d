@@ -114,5 +114,4 @@
 (global-set-key (kbd "<f7>") 'ecb-activate)
 (global-set-key (kbd "<f8>") 'ecb-deactivate)
 
-
 (provide 'rc-bindings)

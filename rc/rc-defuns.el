@@ -42,5 +42,4 @@
     ;;  tagfile already exists; update it
     (shell-command "global -u && echo 'updated tagfile'")))
 
-
 (provide 'rc-defuns)

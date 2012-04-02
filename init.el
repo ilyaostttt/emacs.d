@@ -31,6 +31,7 @@
 (require 'rc-lisp)
 (require 'rc-c-mode)
 (require 'rc-ecb)
+(require 'rc-dired)
 (require 'rc-bindings)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
