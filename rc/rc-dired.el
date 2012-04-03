@@ -7,6 +7,8 @@
             ))
 (add-hook 'dired-mode-hook
           (lambda ()
+            (local-set-key (kbd "f") 'find-dired)
+            (local-set-key (kbd "e") 'find-grep)
             ;; Set dired-x buffer-local variables here.  For example:
             (dired-omit-mode 1)
             ))

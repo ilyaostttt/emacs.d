@@ -33,6 +33,7 @@
 (require 'rc-ecb)
 (require 'rc-dired)
 (require 'rc-bindings)
+(require 'rc-ede)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (load custom-file 'noerror)

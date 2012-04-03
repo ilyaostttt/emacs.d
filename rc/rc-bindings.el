@@ -51,9 +51,6 @@
                                   (interactive)
                                   (save-buffers-kill-terminal t)))
 
-(global-set-key (kbd "C-c S") 'sr-speedbar-toggle)
-(global-set-key (kbd "C-c s") 'sr-speedbar-select-window)
-
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'super))
 
@@ -65,6 +62,7 @@
 
 (global-set-key (kbd "C-c t") 'multi-term-next)
 (global-set-key (kbd "C-c T") 'multi-term)
+(global-set-key (kbd "C-c s") 'shell)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
