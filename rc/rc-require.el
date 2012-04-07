@@ -37,7 +37,14 @@
           global-semantic-mru-bookmark-mode))
 
 (require 'org)
-
 (require 'magit)
+
+(require 'auto-complete-config)
+
+(defun ac-cc-mode-setup ()
+  (setq ac-sources (append '(ac-source-yasnippet ac-source-gtags ac-source-semantic) ac-sources)))
+
+(ac-config-default)
+(ac-set-trigger-key nil)
 
 (provide 'rc-require)

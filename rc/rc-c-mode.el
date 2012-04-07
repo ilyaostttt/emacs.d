@@ -21,6 +21,8 @@
 (require 'semantic/bovine/c)
 (require 'semantic/symref)
 
+(semantic-gcc-setup)
+
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file "/home/ilya/src/def.h")
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file "/usr/include/i386-linux-gnu/sys/cdefs.h")
 

@@ -11,5 +11,7 @@ history
 places
 eshell/
 bookmarks
-
+ac-comphist.dat
 /ede-projects.el
+url/
+
