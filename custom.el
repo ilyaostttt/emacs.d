@@ -5,12 +5,13 @@
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
  '(blink-matching-paren nil)
- '(c-default-style (quote ((c-mode . "awk") (c++-mode . "awk") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
+ '(c-default-style (quote ((c-mode . "linux") (c++-mode . "linux") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(compilation-read-command nil)
  '(custom-enabled-themes (quote (wombat)))
  '(default-input-method "russian-computer")
- '(dired-dwim-target t t)
- '(dired-recursive-copies (quote always) t)
+ '(dired-dwim-target t)
+ '(dired-omit-files "^\\..*$\\|^\\.?#\\|^\\.$\\|^\\.\\.$\\|GPATH\\|GRTAGS\\|GSYMS\\|GTAGS")
+ '(dired-recursive-copies (quote always))
  '(ecb-compile-window-height 12)
  '(ecb-layout-name "left10")
  '(ecb-layout-window-sizes nil)
@@ -18,6 +19,8 @@
  '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.25)
  '(ede-project-directories (quote ("/home/ilya/src/cpp")))
+ '(electric-indent-mode t)
+ '(electric-pair-mode t)
  '(gdb-many-windows t)
  '(global-hl-line-mode t)
  '(global-semantic-decoration-mode t)
@@ -61,7 +64,9 @@
  '(sr-speedbar-width-x 32)
  '(tool-bar-mode nil)
  '(truncate-lines t)
- '(truncate-partial-width-windows nil))
+ '(truncate-partial-width-windows nil)
+ '(yas/also-auto-indent-first-line t)
+ '(yas/wrap-around-region t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

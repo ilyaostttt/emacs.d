@@ -1,4 +1,5 @@
-(set-default-font "Consolas-12")
+(set-frame-font "Consolas-11" nil t)
+
 (menu-bar-mode -1)
 
 (load-theme 'wombat t nil)

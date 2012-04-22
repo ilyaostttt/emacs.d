@@ -39,12 +39,12 @@
 (require 'org)
 (require 'magit)
 
-(require 'auto-complete-config)
+;; (require 'auto-complete-config)
 
-(defun ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-yasnippet ac-source-gtags ac-source-semantic) ac-sources)))
+;; (defun ac-cc-mode-setup ()
+;;   (setq ac-sources (append '(ac-source-yasnippet ac-source-gtags ac-source-semantic) ac-sources)))
 
-(ac-config-default)
-(ac-set-trigger-key nil)
+;; (ac-config-default)
+;; (ac-set-trigger-key nil)
 
 (provide 'rc-require)

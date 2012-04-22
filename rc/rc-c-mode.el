@@ -1,9 +1,3 @@
-(setq c-default-style '((c-mode . "awk")
-                        (c++-mode . "awk")
-                        (java-mode . "java")
-                        (awk-mode . "awk")
-                        (other . "gnu")))
-
 (add-hook 'gtags-mode-hook
           (lambda()
             (local-set-key (kbd "M-.") 'gtags-find-tag)   ; find a tag, also M-.
