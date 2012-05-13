@@ -1,8 +1,13 @@
-(set-frame-font "Consolas-11" nil t)
+(if (equal (system-name) "ilya-MS-7680")
+    (set-frame-font "Consolas-11" nil t)
+  (set-frame-font "Consolas-10" nil t))
 
 (menu-bar-mode -1)
 
-(load-theme 'wombat t nil)
+(setq
+ scroll-margin 0
+ scroll-conservatively 100000
+ scroll-preserve-screen-position nil)
 
 (setq auto-save-default nil
       blink-matching-paren nil
@@ -48,9 +53,9 @@
 
 (show-paren-mode 1)
 
-(set-face-attribute 'cursor nil :background "grey")
-(set-face-attribute 'highlight nil :background "gray20" :foreground "#ffffff" :underline nil)
-(set-face-attribute 'font-lock-warning-face nil :background "black" :foreground "pink" :bold t)
+;; (set-face-attribute 'cursor nil :background "grey")
+;; (set-face-attribute 'highlight nil :background "gray20" :foreground "#ffffff" :underline nil)
+;; (set-face-attribute 'font-lock-warning-face nil :background "black" :foreground "pink" :bold t)
 ;; (set-face-attribute 'hl-line nil :background "gray20" :foreground "white smoke")
 (set-face-attribute 'show-paren-match nil :foreground "steelblue3" :background "grey14")
 
@@ -96,6 +101,34 @@
 
 (global-ede-mode t)
 
-(server-start)
+;; (server-start)
+
+(setq cua-enable-cua-keys nil) ;; only for rectangles
+(cua-mode t)
+
+(require 'recentf)
+ 
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+ 
+;; enable recent files mode.
+(recentf-mode t)
+ 
+; 50 files ought to be enough.
+(setq recentf-max-saved-items 50)
+ 
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
+
+
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
+(require 'quack)
 
 (provide 'rc-misc)

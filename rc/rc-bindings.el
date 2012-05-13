@@ -1,3 +1,14 @@
+;; (global-set-key (kbd "M-f" ) 'forward-word)
+;; (global-set-key (kbd "M-b" ) 'backward-word)
+
+;; (global-set-key (kbd "C-v" ) '(lambda ()
+;;                                 (interactive)
+;;                                 (scroll-up-command 10)))
+
+;; (global-set-key (kbd "M-v" ) '(lambda ()
+;;                                 (interactive)
+;;                                 (scroll-down-command 10)))
+
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
@@ -18,8 +29,6 @@
 
 (global-set-key (kbd "C-c j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
-(global-set-key (kbd "C-c C-n") 'senator-next-tag)
-(global-set-key (kbd "C-c C-p") 'senator-previous-tag)
 
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
@@ -37,6 +46,8 @@
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cc" 'org-capture)
+(define-key global-map "\C-ce" 'org-export)
 
 (global-set-key (kbd "C-x C-z") 'nil)
 (global-set-key (kbd "C-x C-c") 'nil)
@@ -58,6 +69,10 @@
 (global-set-key (kbd "s-l") 'windmove-right)
 (global-set-key (kbd "s-k") 'windmove-up)
 (global-set-key (kbd "s-j") 'windmove-down)
+(global-set-key (kbd "s-o") 'other-window)
+(global-set-key (kbd "s-O") '(lambda ()
+                                 (interactive)
+                                 (other-window -1)))
 
 
 (global-set-key (kbd "C-c t") 'multi-term-next)
@@ -91,8 +106,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-(define-key global-map "\C-cc" 'org-capture)
-
 (global-set-key (kbd "C-x C-m") 'anything)
 
 (global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
@@ -111,5 +124,23 @@
 (global-set-key (kbd "<f10>") 'magit-status)
 (global-set-key (kbd "<f7>") 'ecb-activate)
 (global-set-key (kbd "<f8>") 'ecb-deactivate)
+
+;; global key for `multi-occur-in-this-mode' - you should change this.
+(global-set-key (kbd "C-<f2>") 'multi-occur-in-this-mode)
+
+(define-prefix-command 'bm-map)
+(global-set-key (kbd "C-c b") 'bm-map)
+(global-set-key (kbd "C-c m") 'bm-map)
+
+(define-key 'bm-map (kbd "n") 'bm-next)
+(define-key 'bm-map (kbd "p") 'bm-prev)
+(define-key 'bm-map (kbd "t") 'bm-toggle)
+(define-key 'bm-map (kbd "b") 'bm-toggle)
+(define-key 'bm-map (kbd "m") 'bm-toggle)
+(define-key 'bm-map (kbd "s") 'bm-show)
+(define-key 'bm-map (kbd "l") 'bm-show)
+(define-key 'bm-map (kbd "S") 'bm-show-all)
+(define-key 'bm-map (kbd "L") 'bm-show-all)
+(define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
 
 (provide 'rc-bindings)
