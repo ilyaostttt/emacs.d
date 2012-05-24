@@ -25,11 +25,10 @@
    (intern (concat (symbol-name x) "-mode-hook")) '(lambda ()
                                                      (run-hooks 'coding-hook))))
 
-
-
 (setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
 (add-to-list 'load-path (concat dotfiles-dir "slime/"))  ; your SLIME directory
 (require 'slime)
 (slime-setup)
 
 (provide 'rc-lisp)
+

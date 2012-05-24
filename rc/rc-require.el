@@ -1,4 +1,3 @@
-(require 'evil)
 (require 'ace-jump-mode)
 (setq ace-jump-mode-case-sensitive-search nil)
 
@@ -47,8 +46,6 @@
 
 ;; (ac-config-default)
 ;; (ac-set-trigger-key nil)
-
-(require 'bookmark+)
 
 (setq bm-restore-repository-on-load t)
 (require 'bm)

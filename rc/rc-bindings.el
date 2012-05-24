@@ -29,6 +29,8 @@
 
 (global-set-key (kbd "C-c j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
+(global-set-key (kbd "C-c C-n") 'senator-next-tag)
+(global-set-key (kbd "C-c C-p") 'senator-previous-tag)
 
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
@@ -124,25 +126,7 @@
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'gdb)
 (global-set-key (kbd "<f10>") 'magit-status)
-;; (global-set-key (kbd "<f7>") 'ecb-activate)
-;; (global-set-key (kbd "<f8>") 'ecb-deactivate)
-(global-set-key (kbd "<f7>") 'sr-speedbar-toggle)
-
-;; global key for `multi-occur-in-this-mode' - you should change this.
-(global-set-key (kbd "C-<f2>") 'multi-occur-in-this-mode)
-
-
-(define-prefix-command 'bm-map)
-(global-set-key (kbd "C-c b") 'bm-map)
-
-(define-key 'bm-map (kbd "n") 'bm-next)
-(define-key 'bm-map (kbd "p") 'bm-prev)
-(define-key 'bm-map (kbd "t") 'bm-toggle)
-(define-key 'bm-map (kbd "b") 'bm-toggle)
-(define-key 'bm-map (kbd "s") 'bm-show)
-(define-key 'bm-map (kbd "l") 'bm-show)
-(define-key 'bm-map (kbd "S") 'bm-show-all)
-(define-key 'bm-map (kbd "L") 'bm-show-all)
-(define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
+(global-set-key (kbd "<f7>") 'ecb-activate)
+(global-set-key (kbd "<f8>") 'ecb-deactivate)
 
 (provide 'rc-bindings)
