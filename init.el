@@ -6,7 +6,6 @@
                     (or (buffer-file-name) load-file-name)))
 
 (setq package-user-dir (concat dotfiles-dir "elpa/"))
-(setq external-elisp-dir (concat dotfiles-dir "external/"))
 
 (add-to-list 'load-path dotfiles-dir)
 (add-to-list 'load-path (concat dotfiles-dir "rc/"))
@@ -20,7 +19,6 @@
        (add-to-list 'load-path (concat dir-to-add dir "/")))))
 
 (add-to-load-path-recursively package-user-dir)
-(add-to-load-path-recursively external-elisp-dir)
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 
