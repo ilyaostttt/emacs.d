@@ -12,6 +12,7 @@
  '(bm-repository-size 200)
  '(bmkp-last-as-first-bookmark-file "/home/ilya/.emacs.d/bookmarks")
  '(c-default-style (quote ((c-mode . "linux") (c++-mode . "linux") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
+ '(c-require-final-newline nil)
  '(compilation-read-command nil)
  '(cua-delete-selection nil)
  '(custom-enabled-themes (quote (wombat)))
@@ -51,6 +52,7 @@
  '(inhibit-startup-screen t)
  '(initial-scratch-message "")
  '(make-backup-files nil)
+ '(mode-require-final-newline nil)
  '(next-screen-context-lines 10)
  '(org-agenda-files (quote ("~/org/")))
  '(org-agenda-prefix-format (quote ((agenda . " %i %-12:c%?-12t% s") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
@@ -75,6 +77,7 @@
  '(org-src-fontify-natively t)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(quack-default-program "racket")
+ '(require-final-newline nil)
  '(scroll-bar-mode nil)
  '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/c++/4.6")))
  '(semantic-decoration-styles (quote (("semantic-decoration-on-includes" . t) ("semantic-decoration-on-protected-members") ("semantic-decoration-on-private-members") ("semantic-tag-boundary" . t))))
@@ -88,6 +91,7 @@
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
  '(yas/also-auto-indent-first-line t)
+ '(yas/prompt-functions (quote (yas/ido-prompt yas/x-prompt yas/dropdown-prompt yas/completing-prompt yas/no-prompt)))
  '(yas/wrap-around-region t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
