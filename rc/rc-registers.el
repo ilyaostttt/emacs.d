@@ -5,7 +5,7 @@
              (?y (file . ,(concat dotfiles-dir "snippets/text-mode/")))
              (?p (file . ,(concat org-directory "/projects.org")))
              (?s (file . "~/src/"))
-             (?o (file . "~/org/"))))
+             (?o (file . ,org-directory))))
   (set-register (car r) (cadr r)))
 
 (provide 'rc-registers)
