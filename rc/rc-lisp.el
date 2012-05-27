@@ -10,7 +10,7 @@
   "Face used to dim parentheses."
   :group 'starter-kit-faces)
 
-(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'lisp-mode-hook 'enable-paredit-mode)
 
@@ -29,6 +29,10 @@
 (add-to-list 'load-path (concat dotfiles-dir "slime/"))  ; your SLIME directory
 (require 'slime)
 (slime-setup)
+
+(let ((hyperspec-location (expand-file-name "~/books/computing/Lisp/HyperSpec/")))
+  (if (file-exists-p hyperspec-location)
+      (setq common-lisp-hyperspec-root hyperspec-location)))
 
 (provide 'rc-lisp)
 
