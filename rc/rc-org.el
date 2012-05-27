@@ -9,6 +9,11 @@
          "* %?\n%U\n")))
 
 (add-hook 'org-mode-hook #'(lambda ()
-                             (local-set-key (kbd "C-c o t") 'org-time-stamp)) )
+                             (add-hook 'org-agenda-mode-hook #'(lambda ()
+                                                                 (define-key org-agenda-mode-map
+                                                                   (kbd "w") #'(lambda ()
+                                                                                 (interactive)
+                                                                                 (org-agenda-write (concat org-directory "export/agenda.txt"))))))))
+
 
 (provide 'rc-org)

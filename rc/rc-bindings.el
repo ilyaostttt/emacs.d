@@ -29,6 +29,8 @@
 
 (global-set-key (kbd "C-c j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
+(global-set-key (kbd "C-c C-n") 'senator-next-tag)
+(global-set-key (kbd "C-c C-p") 'senator-previous-tag)
 
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
@@ -48,6 +50,8 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
 (define-key global-map "\C-ce" 'org-export)
+(define-key org-mode-map (kbd "C-c o s") 'org-time-stamp)
+(define-key org-mode-map (kbd "C-c o m") 'org-insert-heading-respect-content)
 
 (global-set-key (kbd "C-x C-z") 'nil)
 (global-set-key (kbd "C-x C-c") 'nil)
@@ -73,7 +77,6 @@
 (global-set-key (kbd "s-O") '(lambda ()
                                  (interactive)
                                  (other-window -1)))
-
 
 (global-set-key (kbd "C-c t") 'multi-term-next)
 (global-set-key (kbd "C-c T") 'multi-term)
@@ -106,6 +109,8 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+
+
 (global-set-key (kbd "C-x C-m") 'anything)
 
 (global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
@@ -125,9 +130,6 @@
 (global-set-key (kbd "<f7>") 'ecb-activate)
 (global-set-key (kbd "<f8>") 'ecb-deactivate)
 
-;; global key for `multi-occur-in-this-mode' - you should change this.
-(global-set-key (kbd "C-<f2>") 'multi-occur-in-this-mode)
-
 (define-prefix-command 'bm-map)
 (global-set-key (kbd "C-c b") 'bm-map)
 (global-set-key (kbd "C-c m") 'bm-map)
@@ -142,5 +144,6 @@
 (define-key 'bm-map (kbd "S") 'bm-show-all)
 (define-key 'bm-map (kbd "L") 'bm-show-all)
 (define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
+
 
 (provide 'rc-bindings)
