@@ -27,7 +27,6 @@
 (global-set-key (kbd "C-M-s" ) 'isearch-forward)
 (global-set-key (kbd "C-M-r" ) 'isearch-backward)
 
-(global-set-key (kbd "C-c j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c C-n") 'senator-next-tag)
 (global-set-key (kbd "C-c C-p") 'senator-previous-tag)
@@ -147,3 +146,4 @@
 
 
 (provide 'rc-bindings)
+ 

@@ -30,7 +30,7 @@
 (require 'rc-registers)
 (require 'rc-lisp)
 (require 'rc-c-mode)
-(require 'rc-ecb)
+;;(require 'rc-ecb)
 (require 'rc-dired)
 (require 'rc-bindings)
 (require 'rc-ede)
