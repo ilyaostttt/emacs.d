@@ -145,5 +145,7 @@
 (define-key 'bm-map (kbd "L") 'bm-show-all)
 (define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
 
+;; accidentally hit set-goal-column when actually trying to narrow buffer (usually to defun)
+(global-set-key (kbd "C-x C-n") 'narrow-to-defun)
 
 (provide 'rc-bindings)
