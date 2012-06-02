@@ -1,13 +1,13 @@
 ;; (global-set-key (kbd "M-f" ) 'forward-word)
 ;; (global-set-key (kbd "M-b" ) 'backward-word)
 
-;; (global-set-key (kbd "C-v" ) '(lambda ()
-;;                                 (interactive)
-;;                                 (scroll-up-command 10)))
+(global-set-key (kbd "C-v" ) '(lambda ()
+                                (interactive)
+                                (scroll-up-command 1)))
 
-;; (global-set-key (kbd "M-v" ) '(lambda ()
-;;                                 (interactive)
-;;                                 (scroll-down-command 10)))
+(global-set-key (kbd "M-v" ) '(lambda ()
+                                (interactive)
+                                (scroll-down-command 1)))
 
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
@@ -48,7 +48,7 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
-(define-key global-map "\C-ce" 'org-export)
+
 (define-key org-mode-map (kbd "C-c o s") 'org-time-stamp)
 (define-key org-mode-map (kbd "C-c o m") 'org-insert-heading-respect-content)
 
@@ -68,10 +68,11 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'super))
 
-(global-set-key (kbd "s-h") 'windmove-left)
-(global-set-key (kbd "s-l") 'windmove-right)
-(global-set-key (kbd "s-k") 'windmove-up)
-(global-set-key (kbd "s-j") 'windmove-down)
+(global-set-key (kbd "C-c <up>") 'windmove-up)
+(global-set-key (kbd "C-c <down>") 'windmove-down)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <left>") 'windmove-left)
+
 (global-set-key (kbd "s-o") 'other-window)
 (global-set-key (kbd "s-O") '(lambda ()
                                  (interactive)
@@ -102,7 +103,7 @@
                                   'fullboth)))))
 (global-set-key [f11] 'toggle-fullscreen)
 
-;; (global-set-key (kbd "C-c E") 'ecb-activate)
+
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -125,9 +126,20 @@
 
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'gdb)
+
+(define-prefix-command 'mygdb-map)
+(global-set-key (kbd "C-c g") 'mygdb-map)
+(global-set-key (kbd "C-c g g") 'gdb)
+(global-set-key (kbd "C-c g b") 'gud-break)
+
 (global-set-key (kbd "<f10>") 'magit-status)
-(global-set-key (kbd "<f7>") 'ecb-activate)
-(global-set-key (kbd "<f8>") 'ecb-deactivate)
+
+(define-prefix-command 'myecb-map)
+(define-key global-map (kbd "C-c e") 'myecb-map)
+(global-set-key (kbd "C-c e a") 'ecb-activate)
+(global-set-key (kbd "C-c e d") 'ecb-deactivate)
+(global-set-key (kbd "C-c e t") 'ecb-toggle-ecb-windows)
+
 
 (define-prefix-command 'bm-map)
 (global-set-key (kbd "C-c b") 'bm-map)
@@ -144,6 +156,8 @@
 (define-key 'bm-map (kbd "L") 'bm-show-all)
 (define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
 
+;; accidentally hit set-goal-column when actually trying to narrow buffer (usually to defun)
+(global-set-key (kbd "C-x C-n") 'narrow-to-defun)
 
 (provide 'rc-bindings)
  
