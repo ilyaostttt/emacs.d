@@ -95,6 +95,7 @@
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
  '(yas/also-auto-indent-first-line t)
+ '(yas/prompt-functions (quote (yas/ido-prompt yas/dropdown-prompt yas/completing-prompt yas/x-prompt yas/no-prompt)))
  '(yas/wrap-around-region t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

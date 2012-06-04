@@ -1,4 +1,3 @@
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -30,7 +29,7 @@
 (require 'rc-registers)
 (require 'rc-lisp)
 (require 'rc-c-mode)
-;; (require 'rc-ecb)
+(require 'rc-ecb)
 (require 'rc-dired)
 (require 'rc-bindings)
 (require 'rc-ede)
