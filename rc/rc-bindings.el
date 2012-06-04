@@ -1,13 +1,10 @@
-;; (global-set-key (kbd "M-f" ) 'forward-word)
-;; (global-set-key (kbd "M-b" ) 'backward-word)
+;; (global-set-key (kbd "C-v" ) '(lambda ()
+;;                                 (interactive)
+;;                                 (scroll-up-command 1)))
 
-(global-set-key (kbd "C-v" ) '(lambda ()
-                                (interactive)
-                                (scroll-up-command 1)))
-
-(global-set-key (kbd "M-v" ) '(lambda ()
-                                (interactive)
-                                (scroll-down-command 1)))
+;; (global-set-key (kbd "M-v" ) '(lambda ()
+;;                                 (interactive)
+;;                                 (scroll-down-command 1)))
 
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
@@ -138,6 +135,7 @@
 (define-prefix-command 'myecb-map)
 (define-key global-map (kbd "C-c e") 'myecb-map)
 (global-set-key (kbd "C-c e a") 'ecb-activate)
+(global-set-key (kbd "C-c e e") 'ecb-activate) 
 (global-set-key (kbd "C-c e d") 'ecb-deactivate)
 (global-set-key (kbd "C-c e t") 'ecb-toggle-ecb-windows)
 
