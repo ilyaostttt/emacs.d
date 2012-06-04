@@ -52,6 +52,7 @@
 (define-key global-map "\C-ce" 'org-export)
 (define-key org-mode-map (kbd "C-c o s") 'org-time-stamp)
 (define-key org-mode-map (kbd "C-c o m") 'org-insert-heading-respect-content)
+(define-key org-mode-map (kbd "C-c o p") 'org-priority)
 
 (global-set-key (kbd "C-x C-z") 'nil)
 (global-set-key (kbd "C-x C-c") 'nil)
