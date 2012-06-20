@@ -13,7 +13,8 @@
                                                                  (define-key org-agenda-mode-map
                                                                    (kbd "w") #'(lambda ()
                                                                                  (interactive)
-                                                                                 (org-agenda-write (concat org-directory "export/agenda.txt"))))))))
+                                                                                 (org-agenda-write (concat org-directory "export/agenda.txt"))
+                                                                                 (org-agenda-write (concat org-directory "export/agenda.html"))))))))
 
 
 (provide 'rc-org)

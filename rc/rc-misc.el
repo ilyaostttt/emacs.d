@@ -1,6 +1,6 @@
-(if (equal (system-name) "ilya-MS-7680")
-    (set-frame-font "Consolas 11" nil t)
-  (set-frame-font "Consolas-10" nil t))
+(if (or (equal (system-name) "ilya-Ideapad-S100")
+        (equal (system-name) "ilya-MS-7680"))
+    (set-frame-font "Consolas-11" nil t))
 
 (menu-bar-mode -1)
 
