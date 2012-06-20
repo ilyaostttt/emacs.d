@@ -32,6 +32,13 @@
 (global-set-key (kbd "C-c C-n") 'senator-next-tag)
 (global-set-key (kbd "C-c C-p") 'senator-previous-tag)
 
+(define-prefix-command 'my-cedet-map)
+(global-set-key (kbd "C-c s") 'my-cedet-map)
+(define-key 'my-cedet-map (kbd "l") #'(lambda ()
+                                              (interactive)
+                                              (load-file ".ede-proj")))
+(define-key 'my-cedet-map (kbd "c") 'semantic-clear-toplevel-cache)
+
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
 (global-set-key (kbd "C-c y") 'bury-buffer)
@@ -75,12 +82,12 @@
 (global-set-key (kbd "s-j") 'windmove-down)
 (global-set-key (kbd "s-o") 'other-window)
 (global-set-key (kbd "s-O") '(lambda ()
-                                 (interactive)
-                                 (other-window -1)))
+                               (interactive)
+                               (other-window -1)))
 
 (global-set-key (kbd "C-c t") 'multi-term-next)
 (global-set-key (kbd "C-c T") 'multi-term)
-(global-set-key (kbd "C-c s") 'shell)
+;; (global-set-key (kbd "C-c s") 'shell)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)

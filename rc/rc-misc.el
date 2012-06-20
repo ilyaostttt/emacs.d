@@ -88,8 +88,8 @@
 (autoload 'multi-term "multi-term" nil t)
 (autoload 'multi-term-next "multi-term" nil t)
 
-(setq multi-term-program "/bin/bash")   ;; use bash
-;; (setq multi-term-program "/bin/zsh") ;; or use zsh...
+;; (setq multi-term-program "/bin/bash")   ;; use bash
+(setq multi-term-program "/bin/zsh") ;; or use zsh...
 
 ;; only needed if you use autopair
 (add-hook 'term-mode-hook
