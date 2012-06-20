@@ -73,10 +73,10 @@
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'super))
 
-(global-set-key (kbd "C-c <up>") 'windmove-up)
-(global-set-key (kbd "C-c <down>") 'windmove-down)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
-(global-set-key (kbd "C-c <left>") 'windmove-left)
+(global-set-key (kbd "s-k") 'windmove-up)
+(global-set-key (kbd "s-j") 'windmove-down)
+(global-set-key (kbd "s-l") 'windmove-right)
+(global-set-key (kbd "s-h") 'windmove-left)
 
 (global-set-key (kbd "s-o") 'other-window)
 (global-set-key (kbd "s-O") '(lambda ()
