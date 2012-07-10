@@ -1,17 +1,7 @@
-;; (global-set-key (kbd "C-v" ) '(lambda ()
-;;                                 (interactive)
-;;                                 (scroll-up-command 1)))
-
-;; (global-set-key (kbd "M-v" ) '(lambda ()
-;;                                 (interactive)
-;;                                 (scroll-down-command 1)))
-
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
 (global-set-key (kbd "C-z"   ) 'undo)
-;; (global-set-key (kbd "C-S-z" ) 'undo-tree-undo)
-;; (global-set-key (kbd "C-x C-k") 'ido-kill-buffer)
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
@@ -78,14 +68,7 @@
 (global-set-key (kbd "s-l") 'windmove-right)
 (global-set-key (kbd "s-h") 'windmove-left)
 
-(global-set-key (kbd "s-o") 'other-window)
-(global-set-key (kbd "s-O") '(lambda ()
-                               (interactive)
-                               (other-window -1)))
-
-(global-set-key (kbd "C-c t") 'multi-term-next)
-(global-set-key (kbd "C-c T") 'multi-term)
-;; (global-set-key (kbd "C-c s") 'shell)
+(global-set-key (kbd "C-c t") 'shell)
 
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
@@ -108,13 +91,9 @@
                                   'fullboth)))))
 (global-set-key [f11] 'toggle-fullscreen)
 
-
-
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-
 
 (global-set-key (kbd "C-x C-m") 'anything)
 
@@ -127,10 +106,12 @@
                                  (interactive)
                                  (woman (current-word))))
 
-;; (global-set-key (kbd "C-c b") 'previous-buffer)
-
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'gdb)
+(global-set-key (kbd "<f7>") 'gud-step)
+(global-set-key (kbd "<f8>") 'gud-next)
+(global-set-key (kbd "s-n") 'gud-next)
+(global-set-key (kbd "s-N") 'gud-step)
 
 (define-prefix-command 'mygdb-map)
 (global-set-key (kbd "C-c g") 'mygdb-map)
@@ -161,6 +142,10 @@
 (define-key 'bm-map (kbd "S") 'bm-show-all)
 (define-key 'bm-map (kbd "L") 'bm-show-all)
 (define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
+
+(global-set-key (kbd "s-m") 'helm-mini)
+(global-set-key (kbd "s-o") 'helm-occur)
+(global-set-key (kbd "s-s") 'helm-semantic)
 
 ;; accidentally hit set-goal-column when actually trying to narrow buffer (usually to defun)
 (global-set-key (kbd "C-x C-n") 'narrow-to-defun)

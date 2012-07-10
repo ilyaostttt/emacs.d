@@ -1,6 +1,6 @@
 (require 'ecb)
 
-(setq ecb-layout-name "right1"
+(setq ecb-layout-name "mylayout1"
       ecb-layout-window-sizes nil
       ecb-tip-of-the-day nil
       ecb-windows-width 0.20)

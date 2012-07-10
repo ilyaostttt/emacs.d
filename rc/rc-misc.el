@@ -35,7 +35,7 @@
       inhibit-startup-screen t
       initial-scratch-message ""
       make-backup-files nil
-      package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/")))
+      package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/")))
       scroll-bar-mode nil
       show-paren-delay 0.025
       show-paren-mode t
