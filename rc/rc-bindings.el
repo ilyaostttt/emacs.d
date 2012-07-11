@@ -15,6 +15,11 @@
 (global-set-key (kbd "C-M-r" ) 'isearch-backward)
 
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
+(global-set-key (kbd "s-f") 'semantic-ia-fast-jump)
+(global-set-key (kbd "s-c") 'semantic-complete-jump)
+
+(global-set-key (kbd "s-p") 'pop-global-mark)
+
 (global-set-key (kbd "C-c C-n") 'senator-next-tag)
 (global-set-key (kbd "C-c C-p") 'senator-previous-tag)
 

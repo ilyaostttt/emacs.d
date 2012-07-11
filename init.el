@@ -18,6 +18,7 @@
        (add-to-list 'load-path (concat dir-to-add dir "/")))))
 
 (add-to-load-path-recursively package-user-dir)
+(add-to-load-path-recursively (concat dotfiles-dir "site-lisp/"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 
