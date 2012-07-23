@@ -21,16 +21,19 @@
 (add-to-load-path-recursively (concat dotfiles-dir "site-lisp/"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
+(load autoload-file)
 
-(require 'rc-require)
-(require 'rc-defuns)
+(autoload 'server-running-p "server" )
+(if (not (server-running-p))
+    (server-start))
+
 (require 'rc-misc)
+(require 'rc-defuns)
 (require 'rc-yasnippet)
 (require 'rc-org)
 (require 'rc-registers)
 (require 'rc-lisp)
 (require 'rc-c-mode)
-(require 'rc-ecb)
 (require 'rc-dired)
 (require 'rc-bindings)
 (require 'rc-ede)

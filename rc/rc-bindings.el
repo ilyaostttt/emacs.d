@@ -1,24 +1,22 @@
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
+(global-set-key (kbd "s-r" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
 (global-set-key (kbd "C-z"   ) 'undo)
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
-(global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
 (global-set-key (kbd "C-s"   ) 'isearch-forward-regexp)
 (global-set-key (kbd "\C-r"  ) 'isearch-backward-regexp)
-(global-set-key (kbd "C-M-s" ) 'isearch-forward)
+(global-set-key (kbd "C-M-s" ) 'isearch-forward-word)
 (global-set-key (kbd "C-M-r" ) 'isearch-backward)
 
 (global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "s-f") 'semantic-ia-fast-jump)
 (global-set-key (kbd "s-c") 'semantic-complete-jump)
-
-(global-set-key (kbd "s-p") 'pop-global-mark)
 
 (global-set-key (kbd "C-c C-n") 'senator-next-tag)
 (global-set-key (kbd "C-c C-p") 'senator-previous-tag)
@@ -26,8 +24,8 @@
 (define-prefix-command 'my-cedet-map)
 (global-set-key (kbd "C-c s") 'my-cedet-map)
 (define-key 'my-cedet-map (kbd "l") #'(lambda ()
-                                              (interactive)
-                                              (load-file ".ede-proj")))
+                                        (interactive)
+                                        (load-file ".ede-proj")))
 (define-key 'my-cedet-map (kbd "c") 'semantic-clear-toplevel-cache)
 
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
@@ -48,13 +46,14 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
 
-(define-key org-mode-map (kbd "C-c o s") 'org-time-stamp)
-(define-key org-mode-map (kbd "C-c o m") 'org-insert-heading-respect-content)
-(define-key org-mode-map (kbd "C-c o p") 'org-priority)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (define-key org-mode-map (kbd "C-c o s") 'org-time-stamp)
+            (define-key org-mode-map (kbd "C-c o m") 'org-insert-heading-respect-content)
+            (define-key org-mode-map (kbd "C-c o p") 'org-priority)))
 
 (global-set-key (kbd "C-x C-z") 'nil)
 (global-set-key (kbd "C-x C-c") 'nil)
-
 
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "C-x O") '(lambda ()
@@ -100,8 +99,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-(global-set-key (kbd "C-x C-m") 'anything)
-
 (global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<XF86Save>") 'save-buffer)
 
@@ -115,8 +112,6 @@
 (global-set-key (kbd "<f6>") 'gdb)
 (global-set-key (kbd "<f7>") 'gud-step)
 (global-set-key (kbd "<f8>") 'gud-next)
-(global-set-key (kbd "s-n") 'gud-next)
-(global-set-key (kbd "s-N") 'gud-step)
 
 (define-prefix-command 'mygdb-map)
 (global-set-key (kbd "C-c g") 'mygdb-map)
@@ -125,35 +120,47 @@
 
 (global-set-key (kbd "<f10>") 'magit-status)
 
-(define-prefix-command 'myecb-map)
-(define-key global-map (kbd "C-c e") 'myecb-map)
-(global-set-key (kbd "C-c e a") 'ecb-activate)
-(global-set-key (kbd "C-c e e") 'ecb-activate) 
-(global-set-key (kbd "C-c e d") 'ecb-deactivate)
-(global-set-key (kbd "C-c e t") 'ecb-toggle-ecb-windows)
-
-
-(define-prefix-command 'bm-map)
-(global-set-key (kbd "C-c b") 'bm-map)
-(global-set-key (kbd "C-c m") 'bm-map)
-
-(define-key 'bm-map (kbd "n") 'bm-next)
-(define-key 'bm-map (kbd "p") 'bm-prev)
-(define-key 'bm-map (kbd "t") 'bm-toggle)
-(define-key 'bm-map (kbd "b") 'bm-toggle)
-(define-key 'bm-map (kbd "m") 'bm-toggle)
-(define-key 'bm-map (kbd "s") 'bm-show)
-(define-key 'bm-map (kbd "l") 'bm-show)
-(define-key 'bm-map (kbd "S") 'bm-show-all)
-(define-key 'bm-map (kbd "L") 'bm-show-all)
-(define-key 'bm-map (kbd "a") 'bm-bookmark-annotate)
-
 (global-set-key (kbd "s-m") 'helm-mini)
 (global-set-key (kbd "s-o") 'helm-occur)
 (global-set-key (kbd "s-s") 'helm-semantic)
+(global-set-key (kbd "C-x C-m") 'helm-M-x)
+(global-set-key (kbd "s-:") 'helm-complex-command-history)
+(global-set-key (kbd "M-g s") 'helm-do-grep)
+(global-set-key (kbd "C-c C-f") 'helm-find-files)
+(global-set-key (kbd "C-c e") 'helm-c-etags-select)
 
 ;; accidentally hit set-goal-column when actually trying to narrow buffer (usually to defun)
 (global-set-key (kbd "C-x C-n") 'narrow-to-defun)
 
+(global-set-key (kbd "C-<") 'mark-previous-like-this)
+(global-set-key (kbd "C->") 'mark-next-like-this)
+(global-set-key (kbd "s-,") 'mark-previous-like-this)
+(global-set-key (kbd "s-.") 'mark-next-like-this)
+(global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
+(global-set-key (kbd "C-*") 'mark-all-like-this)
+(global-set-key (kbd "s-8") 'mark-all-like-this)
+
+;; get rid of `find-file-read-only' and replace it with something more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
+(global-set-key (kbd "s-;") '(lambda ()
+                               (interactive)
+                               (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
+
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (local-set-key (kbd "f") 'find-dired)
+            (local-set-key (kbd "e") 'find-grep)
+            (local-set-key (kbd "s-u") 'dired-up-directory)
+            (local-set-key (kbd "M-u") 'dired-unmark)
+            ))
+
+(global-set-key (kbd "s-n") (lambda ()
+                                (interactive)
+                                (next-line 7)))
+
+(global-set-key (kbd "s-p") (lambda ()
+                                (interactive)
+                                (previous-line 7)))
+
 (provide 'rc-bindings)
- 

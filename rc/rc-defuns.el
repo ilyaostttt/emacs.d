@@ -26,7 +26,7 @@
                     nil))))))
 
 (add-hook 'coding-hook 'pretty-lambdas)
-(add-hook 'coding-hook 'add-watchwords) ;;
+(add-hook 'coding-hook 'add-watchwords)
 
 ;;; from emacs-fu blog
 (defun djcb-gtags-create-or-update ()
@@ -41,7 +41,6 @@
         (cd olddir)) ; restore
     ;;  tagfile already exists; update it
     (shell-command "global -u && echo 'updated tagfile'")))
-
 
 (eval-when-compile
   (require 'cl))
@@ -62,5 +61,11 @@
    (get-buffers-matching-mode major-mode)
    (car (occur-read-primary-args))))
  
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
 
 (provide 'rc-defuns)

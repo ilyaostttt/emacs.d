@@ -10,29 +10,15 @@
   "Face used to dim parentheses."
   :group 'starter-kit-faces)
 
-
-(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
-(add-hook 'lisp-mode-hook 'enable-paredit-mode)
-
 (dolist (x '(scheme emacs-lisp lisp clojure))
   (when window-system
     (font-lock-add-keywords
      (intern (concat (symbol-name x) "-mode"))
      '(("(\\|)" . 'esk-paren-face))))
-  ;; (add-hook
-  ;;  (intern (concat (symbol-name x) "-mode-hook")) 'turn-on-paredit)
   (add-hook
    (intern (concat (symbol-name x) "-mode-hook")) '(lambda ()
+                                                     (require 'paredit)
+                                                     (enable-paredit-mode)
                                                      (run-hooks 'coding-hook))))
 
-(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
-(add-to-list 'load-path (concat dotfiles-dir "slime/"))  ; your SLIME directory
-(require 'slime)
-(slime-setup)
-
-(let ((hyperspec-location (expand-file-name "~/books/computing/Lisp/HyperSpec/")))
-  (if (file-exists-p hyperspec-location)
-      (setq common-lisp-hyperspec-root hyperspec-location)))
-
 (provide 'rc-lisp)
-
