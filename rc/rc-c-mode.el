@@ -10,7 +10,6 @@
                                 (gtags-mode t)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)
                                 (semantic-initialize)
-                                (djcb-gtags-create-or-update)
                                 ))
 
 (defun semantic-initialize ()
