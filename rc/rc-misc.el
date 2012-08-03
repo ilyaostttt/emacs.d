@@ -1,5 +1,6 @@
 (if (or (equal (system-name) "ilya-Ideapad-S100")
-        (equal (system-name) "ilya-MS-7680"))
+        (equal (system-name) "ilya-MS-7680")
+        (equal (system-name) "ilya-ubuntu-work"))
     (set-frame-font "Consolas-11" nil t))
 
 (setq ace-jump-mode-case-sensitive-search nil)
