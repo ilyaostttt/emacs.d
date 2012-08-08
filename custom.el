@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-use-menu-map t)
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "deep sky blue" "deep sky blue" "#ccaa8f" "#f6f3e8"])
  '(auto-save-default nil)
  '(blink-cursor-mode t)
@@ -104,7 +105,7 @@
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
  '(yas/also-auto-indent-first-line t)
- '(yas/prompt-functions (quote (yas/ido-prompt yas/x-prompt yas/dropdown-prompt yas/completing-prompt yas/no-prompt)))
+ '(yas/prompt-functions (quote (yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/ido-prompt yas/no-prompt)))
  '(yas/wrap-around-region t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
