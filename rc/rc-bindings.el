@@ -121,6 +121,7 @@
 (global-set-key (kbd "<f10>") 'magit-status)
 
 (global-set-key (kbd "s-m") 'helm-mini)
+(global-set-key (kbd "s-b") 'helm-bookmarks)
 (global-set-key (kbd "s-o") 'helm-occur)
 (global-set-key (kbd "s-s") 'helm-semantic)
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
@@ -162,5 +163,20 @@
 (global-set-key (kbd "s-p") (lambda ()
                                 (interactive)
                                 (previous-line 7)))
+
+
+(defvar hs-all-hidden nil)
+
+(add-hook 'hs-hide-hook '(lambda ()
+                          (setq hs-all-hidden t)))
+
+(add-hook 'hs-show-hook '(lambda ()
+                          (setq hs-all-hidden nil)))
+
+(global-set-key (kbd "s-a") '(lambda ()
+                               (interactive)
+                               (if hs-all-hidden
+                                   (hs-show-all)
+                                 (hs-hide-all))))
 
 (provide 'rc-bindings)
