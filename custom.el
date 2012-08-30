@@ -42,7 +42,7 @@
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-indent-mode nil)
  '(electric-pair-mode nil)
- '(electric-pair-skip-self t)
+ '(electric-pair-skip-self nil)
  '(gdb-many-windows t)
  '(global-auto-revert-mode t)
  '(global-hl-line-mode t)
@@ -105,7 +105,8 @@
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
  '(yas/also-auto-indent-first-line t)
- '(yas/prompt-functions (quote (yas/dropdown-prompt yas/x-prompt yas/completing-prompt yas/ido-prompt yas/no-prompt)))
+ '(yas/prompt-functions (quote (yas/dropdown-prompt yas/x-prompt yas/ido-prompt yas/completing-prompt yas/no-prompt)))
+ '(yas/trigger-key "s-y")
  '(yas/wrap-around-region t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
