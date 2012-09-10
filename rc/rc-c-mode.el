@@ -5,7 +5,6 @@
 
 (add-hook 'c-mode-common-hook (lambda ()
                                 (add-watchwords)
-                                (electric-pair-mode)
                                 (hs-minor-mode)
                                 (gtags-mode t)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)

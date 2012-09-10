@@ -3,6 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-auto-show-menu nil)
+ '(ac-auto-start nil)
+ '(ac-trigger-key nil)
  '(ac-use-menu-map t)
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "deep sky blue" "deep sky blue" "#ccaa8f" "#f6f3e8"])
  '(auto-save-default nil)
@@ -91,6 +94,7 @@
  '(org-src-fontify-natively t)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(quack-default-program "racket")
+ '(recentf-exclude (quote (".*/.gvfs/.*")))
  '(require-final-newline nil)
  '(scroll-bar-mode nil)
  '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/c++/4.6")))

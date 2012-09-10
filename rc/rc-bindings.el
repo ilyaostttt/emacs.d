@@ -179,4 +179,6 @@
                                    (hs-show-all)
                                  (hs-hide-all))))
 
+(global-set-key (kbd "s-u") 'auto-complete)
+
 (provide 'rc-bindings)
