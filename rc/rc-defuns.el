@@ -68,4 +68,9 @@
       (message "Opening file...")
     (message "Aborting")))
 
+(defun goto-char-in-line (char-to-find)
+  (interactive "cGoto char: ")
+  (search-forward (string char-to-find) (line-end-position))
+  (backward-char))
+
 (provide 'rc-defuns)

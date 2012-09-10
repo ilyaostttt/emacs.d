@@ -22,12 +22,14 @@
   (require 'semantic)
 
   (setq semantic-default-submodes
-        '(global-semanticdb-minor-mode
+        '(
+          global-semanticdb-minor-mode
           global-semantic-idle-scheduler-mode
           global-semantic-idle-summary-mode
           global-semantic-decoration-mode
           global-semantic-highlight-func-mode
-          global-semantic-mru-bookmark-mode))
+          global-semantic-mru-bookmark-mode
+          ))
 
   (semantic-gcc-setup)
 
