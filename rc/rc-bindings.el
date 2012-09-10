@@ -181,5 +181,4 @@
 
 (global-set-key (kbd "s-z") 'repeat)
 (global-set-key (kbd "M-n") 'goto-char-in-line)
-
 (provide 'rc-bindings)
