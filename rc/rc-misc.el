@@ -127,4 +127,5 @@
 (require 'helm)
 (require 'clang-completion-mode)
 
+(require 'helm-clang)
 (provide 'rc-misc)

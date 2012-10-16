@@ -10,6 +10,7 @@
                                 (autopair-mode)
                                 (smart-operator-mode-on)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)
+                                (local-set-key (kbd "s-i") 'helm-clang-select)
                                 ;; (semantic-initialize)
                                 ))
 

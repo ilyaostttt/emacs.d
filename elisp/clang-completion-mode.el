@@ -251,7 +251,8 @@ This variable will typically contain include paths, e.g., -I~/MyProject."
   "mode line")
 
 (defun helm-clang-default-action (candidate)
-  (message candidate))
+  (with-current-buffer ()
+    (insert candidate)))
 
 (defvar helm-clang-source-select
   '((name . "Clang")
