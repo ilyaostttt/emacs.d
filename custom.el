@@ -54,7 +54,7 @@
  '(global-semantic-highlight-func-mode t)
  '(global-semantic-idle-completions-mode nil nil (semantic/idle))
  '(global-semantic-idle-local-symbol-highlight-mode t nil (semantic/idle))
- '(global-semantic-idle-scheduler-mode t)
+ '(global-semantic-idle-scheduler-mode nil)
  '(global-semantic-idle-summary-mode t)
  '(global-semanticdb-minor-mode t)
  '(hippie-expand-try-functions-list (quote (try-complete-file-name-partially try-expand-all-abbrevs try-expand-dabbrev try-expand-dabbrev-all-buffers try-complete-lisp-symbol try-expand-dabbrev-from-kill)))
