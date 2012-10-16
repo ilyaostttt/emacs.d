@@ -7,6 +7,8 @@
                                 (add-watchwords)
                                 (hs-minor-mode)
                                 (gtags-mode t)
+                                (autopair-mode)
+                                (smart-operator-mode-on)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)
                                 ;; (semantic-initialize)
                                 ))

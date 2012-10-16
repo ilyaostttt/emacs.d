@@ -124,6 +124,7 @@
 
 (require 'smart-operator)
 
+(require 'helm)
 (require 'clang-completion-mode)
 
 (provide 'rc-misc)
