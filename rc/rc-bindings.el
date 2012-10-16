@@ -124,6 +124,7 @@
 (global-set-key (kbd "s-b") 'helm-bookmarks)
 (global-set-key (kbd "s-o") 'helm-occur)
 (global-set-key (kbd "s-s") 'helm-semantic)
+(global-set-key (kbd "s-i") 'helm-clang-select)
 (global-set-key (kbd "s-e") 'helm-c-etags-select)
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
 (global-set-key (kbd "s-:") 'helm-complex-command-history)

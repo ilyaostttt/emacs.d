@@ -124,5 +124,6 @@
 
 (require 'smart-operator)
 
+(require 'clang-completion-mode)
 
 (provide 'rc-misc)
