@@ -8,7 +8,7 @@
                                 (hs-minor-mode)
                                 (gtags-mode t)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)
-                                (semantic-initialize)
+                                ;; (semantic-initialize)
                                 ))
 
 (defun semantic-initialize ()
@@ -30,15 +30,6 @@
 
   (semantic-gcc-setup)
 
-  (add-to-list 'semantic-lex-c-preprocessor-symbol-file "/home/ilya/src/def.h")
-  (add-to-list 'semantic-lex-c-preprocessor-symbol-file "/usr/include/i386-linux-gnu/sys/cdefs.h")
-
-  (semantic-c-add-preprocessor-symbol "__USE_XOPEN" "1")
-  (semantic-c-add-preprocessor-symbol "__USE_POSIX" "1")
-  (semantic-c-add-preprocessor-symbol "__USE_GNU" "1")
-  (semantic-c-add-preprocessor-symbol "__USE_BSD" "1")
-  (semantic-c-add-preprocessor-symbol "__nonnull" "")
-  (semantic-c-add-preprocessor-symbol "__USE_POSIX199309" "")
   (semantic-mode 1)
   )
 

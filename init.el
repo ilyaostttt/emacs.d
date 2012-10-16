@@ -1,5 +1,6 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
@@ -37,6 +38,7 @@
 (require 'rc-dired)
 (require 'rc-bindings)
 (require 'rc-ede)
+(require 'rc-python)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (load custom-file 'noerror)

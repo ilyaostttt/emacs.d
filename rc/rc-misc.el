@@ -88,10 +88,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(delete 'try-expand-line hippie-expand-try-functions-list)
-(delete 'try-expand-list hippie-expand-try-functions-list)
-(delete 'try-complete-file-name-partially hippie-expand-try-functions-list)
-(delete 'try-complete-file-name hippie-expand-try-functions-list)
+;; (delete 'try-expand-line hippie-expand-try-functions-list)
+;; (delete 'try-expand-list hippie-expand-try-functions-list)
+;; (delete 'try-complete-file-name-partially hippie-expand-try-functions-list)
+;; (delete 'try-complete-file-name hippie-expand-try-functions-list)
 
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (concat dotfiles-dir "backups")))))
@@ -117,5 +117,12 @@
 
 (add-hook 'ace-jump-mode-before-jump-hook
              (lambda () (push-mark (point) t))) ;until it's fixed in Maramalade
+
+(require 'autopair)
+(autopair-global-mode 1)
+(setq autopair-autowrap 1)
+
+(require 'smart-operator)
+
 
 (provide 'rc-misc)

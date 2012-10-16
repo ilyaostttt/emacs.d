@@ -124,11 +124,11 @@
 (global-set-key (kbd "s-b") 'helm-bookmarks)
 (global-set-key (kbd "s-o") 'helm-occur)
 (global-set-key (kbd "s-s") 'helm-semantic)
+(global-set-key (kbd "s-e") 'helm-c-etags-select)
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
 (global-set-key (kbd "s-:") 'helm-complex-command-history)
 (global-set-key (kbd "M-g s") 'helm-do-grep)
 (global-set-key (kbd "C-c C-f") 'helm-find-files)
-(global-set-key (kbd "C-c e") 'helm-c-etags-select)
 
 ;; accidentally hit set-goal-column when actually trying to narrow buffer (usually to defun)
 (global-set-key (kbd "C-x C-n") 'narrow-to-defun)
