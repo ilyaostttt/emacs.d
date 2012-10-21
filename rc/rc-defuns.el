@@ -73,4 +73,11 @@
   (search-forward (string char-to-find) (line-end-position))
   (backward-char))
 
+(defun common-prog-mode ()
+  (autopair-mode)
+  (linum-mode)
+  (hs-minor-mode)
+  (add-watchwords)
+  (smart-operator-mode-on))
+
 (provide 'rc-defuns)

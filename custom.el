@@ -52,7 +52,7 @@
  '(gdb-many-windows t)
  '(global-auto-revert-mode t)
  '(global-hl-line-mode t)
- '(global-linum-mode t)
+ '(global-linum-mode nil)
  '(global-semantic-decoration-mode t)
  '(global-semantic-highlight-func-mode t)
  '(global-semantic-idle-completions-mode nil nil (semantic/idle))

@@ -9,8 +9,7 @@
 (add-hook 'python-mode-hook
           (lambda ()
             ;; (highlight-indentation)
-            (autopair-mode)
-            (smart-operator-mode-on)
+            (common-prog-mode)
             (local-set-key  (kbd "s-v") 'vline-mode)))
 
 (provide 'rc-python)

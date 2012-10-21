@@ -4,11 +4,7 @@
             (local-set-key (kbd "M-,") 'gtags-find-rtag)))  ; reverse tag
 
 (add-hook 'c-mode-common-hook (lambda ()
-                                (add-watchwords)
-                                (hs-minor-mode)
-                                (gtags-mode t)
-                                (autopair-mode)
-                                (smart-operator-mode-on)
+                                (common-prog-mode)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)
                                 (local-set-key (kbd "s-i") 'helm-clang-select)
                                 ;; (semantic-initialize)
@@ -34,7 +30,6 @@
           ))
 
   (semantic-gcc-setup)
-
   (semantic-mode 1)
   )
 

@@ -88,11 +88,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; (delete 'try-expand-line hippie-expand-try-functions-list)
-;; (delete 'try-expand-list hippie-expand-try-functions-list)
-;; (delete 'try-complete-file-name-partially hippie-expand-try-functions-list)
-;; (delete 'try-complete-file-name hippie-expand-try-functions-list)
-
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (concat dotfiles-dir "backups")))))
 
