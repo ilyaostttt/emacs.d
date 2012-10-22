@@ -75,7 +75,7 @@
 
 (defun common-prog-mode ()
   (autopair-mode)
-  (linum-mode)
+  ;; (linum-mode)
   (hs-minor-mode)
   (add-watchwords)
   (smart-operator-mode-on))
