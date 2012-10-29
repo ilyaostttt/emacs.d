@@ -153,3 +153,6 @@
       (setq cursor-type djcb-normal-cursor-type))))
 
 (add-hook 'post-command-hook 'djcb-set-cursor-according-to-mode)
+
+(mapc 'load '("org-element" "os" "os-bb" "os-github"  "os-rmine" "os-rtm"))
+

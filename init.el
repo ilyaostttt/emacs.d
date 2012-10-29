@@ -21,6 +21,7 @@
 (add-to-load-path-recursively package-user-dir)
 (add-to-load-path-recursively (concat dotfiles-dir "site-lisp/"))
 (add-to-list 'load-path (concat dotfiles-dir "elisp/"))
+(add-to-load-path-recursively (concat dotfiles-dir "elisp/"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (load autoload-file)
