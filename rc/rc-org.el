@@ -14,11 +14,9 @@
 (defun my-org-write ()
   (interactive)
   (org-save-all-org-buffers)
-  (org-agenda-write (concat org-directory "export/agenda.html"))
   (org-mobile-push)
   (kill-buffer "*Org Agenda*")
-  (kill-buffer "*SUMO*")
-  )
+  (kill-buffer "*SUMO*"))
 
 ;; (add-hook 'org-mode-hook #'(lambda ()
 ;;                              (add-hook 'org-agenda-mode-hook #'(lambda ()
