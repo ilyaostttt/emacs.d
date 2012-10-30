@@ -10,6 +10,7 @@
           (lambda ()
             ;; (highlight-indentation)
             (common-prog-mode)
+            (pretty-sigma)
             (local-set-key  (kbd "s-v") 'vline-mode)))
 
 (provide 'rc-python)
