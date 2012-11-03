@@ -102,6 +102,7 @@
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(quack-default-program "racket")
  '(recentf-exclude (quote (".*/.gvfs/.*")))
+ '(recentf-max-saved-items 30)
  '(require-final-newline nil)
  '(scroll-bar-mode nil)
  '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/c++/4.6")))
