@@ -25,8 +25,17 @@
                                     ,(make-char 'greek-iso8859-7 107))
                     nil))))))
 
+(defun pretty-sigma ()
+  (font-lock-add-keywords
+   nil `(("(?\\(self\\>\\)"
+          (0 (progn (compose-region (match-beginning 1) (match-end 1)
+                                    #x03C2)
+                    nil))))))
+
 (add-hook 'coding-hook 'pretty-lambdas)
 (add-hook 'coding-hook 'add-watchwords)
+
+(make-char 'greek-iso8859-7 107)
 
 ;;; from emacs-fu blog
 (defun djcb-gtags-create-or-update ()
@@ -69,15 +78,20 @@
     (message "Aborting")))
 
 (defun goto-char-in-line (char-to-find)
-  (interactive "cGoto char: ")
+  (interactive "Goto char: ")
   (search-forward (string char-to-find) (line-end-position))
   (backward-char))
+
+(require 'smart-operator)
 
 (defun common-prog-mode ()
   (autopair-mode)
   ;; (linum-mode)
   (hs-minor-mode)
   (add-watchwords)
-  (smart-operator-mode-on))
+  ;; (smart-operator-mode-on)
+  (local-set-key "=" 'smart-operator-self-insert-command)
+  (local-set-key "," 'smart-operator-\,)
+  )
 
 (provide 'rc-defuns)
