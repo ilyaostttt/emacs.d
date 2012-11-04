@@ -4,7 +4,7 @@
 
 (require 'highlight-indentation)
 
-;; (require 'python-mode)
+(require 'python-mode)
 
 (add-hook 'python-mode-hook
           (lambda ()
