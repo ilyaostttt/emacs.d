@@ -26,6 +26,8 @@
  '(cua-delete-selection t)
  '(cua-enable-region-auto-help nil)
  '(cua-keep-region-after-copy nil)
+ '(cua-normal-cursor-color "black")
+ '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes (quote (wombat)))
  '(custom-safe-themes (quote ("baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "6f09addffc3de43dfac54697af27b8fb98c6ebd75234d43918b469e66056d3ff" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
  '(debug-on-signal t)
