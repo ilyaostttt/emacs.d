@@ -5,6 +5,10 @@
 (global-set-key (kbd "C-z"   ) 'undo)
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
+(global-set-key (kbd "C-x C-k RET") 'ido-kill-buffer)
+(global-set-key (kbd "s-K") '(lambda ()
+                               (interactive)
+                               (kill-buffer nil)))
 
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
@@ -156,15 +160,6 @@
             (local-set-key (kbd "s-u") 'dired-up-directory)
             (local-set-key (kbd "M-u") 'dired-unmark)
             ))
-
-(global-set-key (kbd "s-n") (lambda ()
-                                (interactive)
-                                (next-line 7)))
-
-(global-set-key (kbd "s-p") (lambda ()
-                                (interactive)
-                                (previous-line 7)))
-
 
 (defvar hs-all-hidden nil)
 
