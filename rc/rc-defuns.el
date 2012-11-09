@@ -85,8 +85,7 @@
 (require 'smart-operator)
 
 (defun common-prog-mode ()
-  ;; (autopair-mode)
-  (electric-pair-mode)
+  (autopair-mode)
   ;; (linum-mode)
   (hs-minor-mode)
   (add-watchwords)

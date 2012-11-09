@@ -18,7 +18,7 @@
  '(bm-repository-size 200)
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(browse-url-browser-function (quote browse-url-firefox))
- '(c-basic-offset 2)
+ '(c-basic-offset 4)
  '(c-default-style (quote ((c-mode . "k&r") (c++-mode . "k&r") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(c-offsets-alist nil)
  '(column-number-mode t)
