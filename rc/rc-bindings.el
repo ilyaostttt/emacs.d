@@ -64,7 +64,7 @@
                                  (interactive)
                                  (other-window -1)))
 
-(global-set-key (kbd "C-<f12>") (lambda ()
+(global-set-key (kbd "<f12>") (lambda ()
                                   (interactive)
                                   (save-buffers-kill-terminal t)))
 
@@ -177,5 +177,4 @@
 
 (global-set-key (kbd "s-u") 'auto-complete)
 (global-set-key (kbd "s-z") 'repeat)
-(global-set-key (kbd "M-n") 'goto-char-in-line)
 (provide 'rc-bindings)

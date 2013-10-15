@@ -1,12 +1,5 @@
-(add-hook 'gtags-mode-hook
-          (lambda()
-            (local-set-key (kbd "M-.") 'gtags-find-tag)   ; find a tag, also M-.
-            (local-set-key (kbd "M-,") 'gtags-find-rtag)))  ; reverse tag
-
 (add-hook 'c-mode-common-hook (lambda ()
-                                (common-prog-mode)
                                 (local-set-key  (kbd "C-c o") 'ff-find-other-file)
-                                (local-set-key (kbd "s-i") 'helm-clang-select)
                                 ;; (semantic-initialize)
                                 ))
 

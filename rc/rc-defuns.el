@@ -1,7 +1,3 @@
-(defun untabify-buffer ()
-  (interactive)
-  (untabify (point-min) (point-max)))
-
 (defun indent-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))
@@ -10,7 +6,6 @@
   "Perform a bunch of operations on the whitespace content of a buffer."
   (interactive)
   (indent-buffer)
-  (untabify-buffer)
   (delete-trailing-whitespace))
 
 (defun add-watchwords ()
@@ -53,7 +48,7 @@
 
 (eval-when-compile
   (require 'cl))
- 
+
 (defun get-buffers-matching-mode (mode)
   "Returns a list of buffers where their major-mode is equal to MODE"
   (let ((buffer-mode-matches '()))
@@ -62,36 +57,19 @@
        (if (eq mode major-mode)
            (add-to-list 'buffer-mode-matches buf))))
    buffer-mode-matches))
- 
+
 (defun multi-occur-in-this-mode ()
   "Show all lines matching REGEXP in buffers with this major mode."
   (interactive)
   (multi-occur
    (get-buffers-matching-mode major-mode)
    (car (occur-read-primary-args))))
- 
+
 (defun ido-recentf-open ()
   "Use `ido-completing-read' to \\[find-file] a recent file"
   (interactive)
   (if (find-file (ido-completing-read "Find recent file: " recentf-list))
       (message "Opening file...")
     (message "Aborting")))
-
-(defun goto-char-in-line (char-to-find)
-  (interactive "Goto char: ")
-  (search-forward (string char-to-find) (line-end-position))
-  (backward-char))
-
-(require 'smart-operator)
-
-(defun common-prog-mode ()
-  (autopair-mode)
-  ;; (linum-mode)
-  (hs-minor-mode)
-  (add-watchwords)
-  ;; (smart-operator-mode-on)
-  (local-set-key "=" 'smart-operator-self-insert-command)
-  (local-set-key "," 'smart-operator-\,)
-  )
 
 (provide 'rc-defuns)

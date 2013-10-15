@@ -41,6 +41,7 @@
 (require 'rc-bindings)
 (require 'rc-ede)
 (require 'rc-python)
+(require 'rc-qtn)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (load custom-file 'noerror)

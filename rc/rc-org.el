@@ -11,20 +11,4 @@
         ("j" "Journal" entry (file+datetree (concat org-directory "journal.org"))
          "* %?\n%U\n")))
 
-(defun my-org-write ()
-  (interactive)
-  (org-save-all-org-buffers)
-  (org-mobile-push)
-  (kill-buffer "*Org Agenda*")
-  (kill-buffer "*SUMO*"))
-
-;; (add-hook 'org-mode-hook #'(lambda ()
-;;                              (add-hook 'org-agenda-mode-hook #'(lambda ()
-;;                                                                  (define-key org-agenda-mode-map
-;;                                                                    (kbd "w") 'my-org-write)))))
-
-
-(define-key org-agenda-mode-map (kbd "w") 'my-org-write)
-(define-key org-agenda-mode-map (kbd "l") 'org-mobile-pull)
-
 (provide 'rc-org)

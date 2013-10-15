@@ -1,7 +1,4 @@
-(if (or (equal (system-name) "ilya-Ideapad-S100")
-        (equal (system-name) "ilya-MS-7680")
-        (equal (system-name) "ilya-ubuntu-work"))
-    (set-frame-font "Consolas-11" nil t))
+(set-frame-font "Mono 10" nil t)
 
 (setq ace-jump-mode-case-sensitive-search nil)
 
@@ -81,9 +78,6 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'set-goal-column 'disabled nil)
 
-(recentf-mode 1)
-
-(set-default 'indent-tabs-mode nil)
 (set-default 'indicate-empty-lines t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -113,18 +107,10 @@
 (add-hook 'ace-jump-mode-before-jump-hook
              (lambda () (push-mark (point) t))) ;until it's fixed in Maramalade
 
-(require 'autopair)
-(autopair-global-mode 1)
-(setq autopair-autowrap 1)
-
-(require 'smart-operator)
-
 (require 'helm)
 (require 'clang-completion-mode)
 
 (require 'helm-clang)
-(provide 'rc-misc)
-
 
 ;; Change cursor color according to mode; inspired by
 ;; http://www.emacswiki.org/emacs/ChangingCursorDynamically
@@ -148,10 +134,10 @@
     (overwrite-mode
       (set-cursor-color djcb-overwrite-color)
       (setq cursor-type djcb-overwrite-cursor-type))
-    (t 
+    (t
       (set-cursor-color djcb-normal-color)
       (setq cursor-type djcb-normal-cursor-type))))
 
 (add-hook 'post-command-hook 'djcb-set-cursor-according-to-mode)
 
-
+(provide 'rc-misc)
