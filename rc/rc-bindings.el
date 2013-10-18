@@ -4,7 +4,7 @@
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
 (global-set-key (kbd "C-z"   ) 'undo)
 (global-set-key (kbd "C-x \\") 'align-regexp)
-(global-set-key (kbd "C-c n") 'cleanup-buffer)
+
 (global-set-key (kbd "C-x C-k RET") 'ido-kill-buffer)
 (global-set-key (kbd "s-K") '(lambda ()
                                (interactive)
@@ -13,42 +13,39 @@
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
+;;;;;;;;;;;;;;;;; isearch
 (global-set-key (kbd "C-s"   ) 'isearch-forward-regexp)
 (global-set-key (kbd "\C-r"  ) 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s" ) 'isearch-forward-word)
 (global-set-key (kbd "C-M-r" ) 'isearch-backward)
-
-(global-set-key (kbd "C-c C-j") 'semantic-ia-fast-jump)
-(global-set-key (kbd "s-f") 'semantic-ia-fast-jump)
-(global-set-key (kbd "s-c") 'semantic-complete-jump)
-
-(global-set-key (kbd "C-c C-n") 'senator-next-tag)
-(global-set-key (kbd "C-c C-p") 'senator-previous-tag)
-
-(define-prefix-command 'my-cedet-map)
-(global-set-key (kbd "C-c s") 'my-cedet-map)
-(define-key 'my-cedet-map (kbd "l") #'(lambda ()
-                                        (interactive)
-                                        (load-file ".ede-proj")))
-(define-key 'my-cedet-map (kbd "c") 'semantic-clear-toplevel-cache)
+;;;;;;;;;;;;;;;;
 
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
+;;;;;;;;;;;;;;;;; C-c
+(global-set-key (kbd "C-c n") 'cleanup-buffer)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-c p") (lambda ()
                                 (interactive)
                                 (revert-buffer-with-coding-system 'cp866)))
-
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
-(global-set-key (kbd "C-x m") 'eshell)
-
-(global-set-key (kbd "C-c q") 'join-line)
-
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
+(global-set-key (kbd "C-c q") 'join-line)
+(global-set-key (kbd "C-c t") 'shell)
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+(global-set-key (kbd "C-;") 'ace-jump-mode)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(global-set-key (kbd "C-c h") 'hs-toggle-hiding)
+(global-set-key (kbd "C-c w") '(lambda ()
+                                 (interactive)
+                                 (woman (current-word))))
+
+;;;;;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x m") 'eshell)
 
 (add-hook 'org-mode-hook
           (lambda ()
@@ -76,11 +73,6 @@
 (global-set-key (kbd "s-l") 'windmove-right)
 (global-set-key (kbd "s-h") 'windmove-left)
 
-(global-set-key (kbd "C-c t") 'shell)
-
-(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
-(global-set-key (kbd "C-;") 'ace-jump-mode)
-
 (global-set-key (kbd "M-#") 'er/expand-region)
 
 (fset 'mark-line
@@ -101,16 +93,11 @@
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 
 (global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<XF86Save>") 'save-buffer)
 
-(global-set-key (kbd "C-c h") 'hs-toggle-hiding)
-
-(global-set-key (kbd "C-c w") '(lambda ()
-                                 (interactive)
-                                 (woman (current-word))))
 
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'gdb)
@@ -161,6 +148,7 @@
             (local-set-key (kbd "M-u") 'dired-unmark)
             ))
 
+;;;;;;;;;;;;;;;; hs
 (defvar hs-all-hidden nil)
 
 (add-hook 'hs-hide-hook '(lambda ()
@@ -174,7 +162,19 @@
                                (if hs-all-hidden
                                    (hs-show-all)
                                  (hs-hide-all))))
+;;;;;;;;;;;;;;;;;;;;;
 
 (global-set-key (kbd "s-u") 'auto-complete)
 (global-set-key (kbd "s-z") 'repeat)
+
+;;;;;;;;;;;;;;;;; ascope
+(define-prefix-command 'my-ascope-map)
+(global-set-key (kbd "s-c") 'my-ascope-map)
+(global-set-key (kbd "s-c i") 'ascope-init)
+(global-set-key (kbd "s-c f") 'ascope-find-global-definition)
+(global-set-key (kbd "s-c F") 'ascope-find-functions-calling-this-function)
+(global-set-key (kbd "s-c s") 'ascope-find-this-symbol)
+(global-set-key (kbd "s-c a") 'ascope-all-symbol-assignments)
+;;;;;;;;;;;;;;;;;
+
 (provide 'rc-bindings)
