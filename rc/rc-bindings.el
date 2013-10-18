@@ -162,7 +162,7 @@
                                (if hs-all-hidden
                                    (hs-show-all)
                                  (hs-hide-all))))
-;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
 
 (global-set-key (kbd "s-u") 'auto-complete)
 (global-set-key (kbd "s-z") 'repeat)
@@ -175,6 +175,7 @@
 (global-set-key (kbd "s-c F") 'ascope-find-functions-calling-this-function)
 (global-set-key (kbd "s-c s") 'ascope-find-this-symbol)
 (global-set-key (kbd "s-c a") 'ascope-all-symbol-assignments)
+(global-set-key (kbd "s-c u") 'ascope-pop-mark)
 ;;;;;;;;;;;;;;;;;
 
 (provide 'rc-bindings)
