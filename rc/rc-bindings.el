@@ -33,6 +33,8 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
 (global-set-key (kbd "C-c q") 'join-line)
+(global-set-key (kbd "C-c b") 'beginning-of-defun)
+(global-set-key (kbd "C-c e") 'end-of-defun)
 (global-set-key (kbd "C-c t") 'shell)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
@@ -98,7 +100,7 @@
 (global-set-key (kbd "<XF86Favorites>") 'bookmark-bmenu-list)
 (global-set-key (kbd "<XF86Save>") 'save-buffer)
 
-
+;;;;;;;;;;;;;; gdb
 (global-set-key (kbd "<f5>") 'compile)
 (global-set-key (kbd "<f6>") 'gdb)
 (global-set-key (kbd "<f7>") 'gud-step)
@@ -108,9 +110,12 @@
 (global-set-key (kbd "C-c g") 'mygdb-map)
 (global-set-key (kbd "C-c g g") 'gdb)
 (global-set-key (kbd "C-c g b") 'gud-break)
+;;;;;;;;;;;;;;;;;;
 
 (global-set-key (kbd "<f10>") 'magit-status)
 
+
+;;;;;;;;;;;;;;;;;;; helm
 (global-set-key (kbd "s-m") 'helm-mini)
 (global-set-key (kbd "s-b") 'helm-bookmarks)
 (global-set-key (kbd "s-o") 'helm-occur)
@@ -121,10 +126,14 @@
 (global-set-key (kbd "s-:") 'helm-complex-command-history)
 (global-set-key (kbd "M-g s") 'helm-do-grep)
 (global-set-key (kbd "C-c C-f") 'helm-find-files)
+;;;;;;;;;;;;;;;;;;;
+
 
 ;; accidentally hit set-goal-column when actually trying to narrow buffer (usually to defun)
 (global-set-key (kbd "C-x C-n") 'narrow-to-defun)
 
+
+;;;;;;;;;;;;;;;;; mark multiple
 (global-set-key (kbd "C-<") 'mark-previous-like-this)
 (global-set-key (kbd "C->") 'mark-next-like-this)
 (global-set-key (kbd "s-,") 'mark-previous-like-this)
@@ -132,6 +141,8 @@
 (global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
 (global-set-key (kbd "C-*") 'mark-all-like-this)
 (global-set-key (kbd "s-8") 'mark-all-like-this)
+;;;;;;;;;;;;;;;;;;;
+
 
 ;; get rid of `find-file-read-only' and replace it with something more useful.
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
