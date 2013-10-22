@@ -8,7 +8,8 @@
  '(ac-trigger-key nil)
  '(ac-use-fuzzy nil)
  '(ac-use-menu-map t)
- '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "deep sky blue" "deep sky blue" "#ccaa8f" "#f6f3e8"])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "deep sky blue" "deep sky blue" "#ccaa8f" "#f6f3e8"])
  '(auto-save-default nil)
  '(blink-cursor-mode t)
  '(blink-matching-paren nil)
@@ -25,13 +26,18 @@
  '(cua-keep-region-after-copy nil)
  '(cua-normal-cursor-color "black")
  '(cursor-in-non-selected-windows nil)
- '(custom-enabled-themes (quote (wombat)))
- '(custom-safe-themes (quote ("baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "6f09addffc3de43dfac54697af27b8fb98c6ebd75234d43918b469e66056d3ff" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
+ '(custom-enabled-themes (quote (tango-dark)))
+ '(custom-safe-themes
+   (quote
+    ("baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "6f09addffc3de43dfac54697af27b8fb98c6ebd75234d43918b469e66056d3ff" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
  '(debug-on-signal t)
  '(default-input-method "russian-computer")
  '(dired-dwim-target t)
- '(dired-omit-extensions (quote (".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".dfsl" ".pfsl" ".d64fsl" ".p64fsl" ".lx64fsl" ".lx32fsl" ".dx64fsl" ".dx32fsl" ".fx64fsl" ".fx32fsl" ".sx64fsl" ".sx32fsl" ".wx64fsl" ".wx32fsl" ".fasl" ".ufsl" ".fsl" ".dxl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".idx" ".lof" ".lot" ".glo" ".blg" ".bbl" ".cp" ".cps" ".fn" ".fns" ".ky" ".kys" ".pg" ".pgs" ".tp" ".tps" ".vr" ".org_archive" ".vrs")))
- '(dired-omit-files "^\\..*$\\|^\\.?#\\|^\\.$\\|^\\.\\.$\\|GPATH\\|GRTAGS\\|GSYMS\\|GTAGS")
+ '(dired-omit-extensions
+   (quote
+    (".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".dfsl" ".pfsl" ".d64fsl" ".p64fsl" ".lx64fsl" ".lx32fsl" ".dx64fsl" ".dx32fsl" ".fx64fsl" ".fx32fsl" ".sx64fsl" ".sx32fsl" ".wx64fsl" ".wx32fsl" ".fasl" ".ufsl" ".fsl" ".dxl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".idx" ".lof" ".lot" ".glo" ".blg" ".bbl" ".cp" ".cps" ".fn" ".fns" ".ky" ".kys" ".pg" ".pgs" ".tp" ".tps" ".vr" ".org_archive" ".vrs")))
+ '(dired-omit-files
+   "^\\..*$\\|^\\.?#\\|^\\.$\\|^\\.\\.$\\|GPATH\\|GRTAGS\\|GSYMS\\|GTAGS")
  '(dired-recursive-copies (quote always))
  '(ecb-compile-window-height 12)
  '(ecb-layout-name "left9")
@@ -61,7 +67,9 @@
  '(global-semantic-idle-summary-mode t)
  '(global-semanticdb-minor-mode t)
  '(grep-highlight-matches (quote auto))
- '(hippie-expand-try-functions-list (quote (try-complete-file-name-partially try-expand-all-abbrevs try-expand-dabbrev try-expand-dabbrev-all-buffers try-complete-lisp-symbol try-expand-dabbrev-from-kill)))
+ '(hippie-expand-try-functions-list
+   (quote
+    (try-complete-file-name-partially try-expand-all-abbrevs try-expand-dabbrev try-expand-dabbrev-all-buffers try-complete-lisp-symbol try-expand-dabbrev-from-kill)))
  '(ido-create-new-buffer (quote always))
  '(ido-enable-flex-matching t)
  '(ido-max-prospects 10)
@@ -74,9 +82,21 @@
  '(max-specpdl-size 30000)
  '(mode-require-final-newline nil)
  '(next-screen-context-lines 2)
- '(org-agenda-custom-commands (quote (("n" "week agena + TODO's" ((agenda) (alltodo)) nil ("~/org/tmp.txt")))))
+ '(org-agenda-custom-commands
+   (quote
+    (("n" "week agena + TODO's"
+      ((agenda)
+       (alltodo))
+      nil
+      ("~/org/tmp.txt")))))
  '(org-agenda-files (quote ("~/org/")))
- '(org-agenda-prefix-format (quote ((agenda . " %i %-12:c%?-12t%s %-8e") (timeline . "  % s") (todo . " %i %-12:c") (tags . " %i %-12:c") (search . " %i %-12:c"))))
+ '(org-agenda-prefix-format
+   (quote
+    ((agenda . " %i %-12:c%?-12t%s %-8e")
+     (timeline . "  % s")
+     (todo . " %i %-12:c")
+     (tags . " %i %-12:c")
+     (search . " %i %-12:c"))))
  '(org-columns-default-format "\"%25ITEM %TODO %3PRIORITY %7Effort{:} %8CLOCKSUM %TAGS\"")
  '(org-default-notes-file "~/org/projects.org")
  '(org-default-priority 67)
@@ -86,7 +106,9 @@
  '(org-fontify-emphasized-text t)
  '(org-fontify-quote-and-verse-blocks t)
  '(org-fontify-whole-heading-line t)
- '(org-global-properties (quote (("Effort_ALL" . "1:00 2:00 3:00 4:00 5:00 6:00 7:00"))))
+ '(org-global-properties
+   (quote
+    (("Effort_ALL" . "1:00 2:00 3:00 4:00 5:00 6:00 7:00"))))
  '(org-hide-emphasis-markers t)
  '(org-hide-leading-stars t)
  '(org-level-color-stars-only nil)
@@ -96,14 +118,22 @@
  '(org-pretty-entities-include-sub-superscripts nil)
  '(org-priority-faces (quote ((65 . "LightPink2"))))
  '(org-src-fontify-natively t)
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(quack-default-program "racket")
  '(recentf-exclude (quote (".*/.gvfs/.*")))
  '(recentf-max-saved-items 30)
  '(require-final-newline nil)
  '(scroll-bar-mode nil)
  '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/c++/4.6")))
- '(semantic-decoration-styles (quote (("semantic-decoration-on-includes" . t) ("semantic-decoration-on-protected-members") ("semantic-decoration-on-private-members") ("semantic-tag-boundary" . t))))
+ '(semantic-decoration-styles
+   (quote
+    (("semantic-decoration-on-includes" . t)
+     ("semantic-decoration-on-protected-members")
+     ("semantic-decoration-on-private-members")
+     ("semantic-tag-boundary" . t))))
  '(semantic-mode nil)
  '(show-paren-delay 0.025)
  '(show-paren-mode t)
@@ -115,7 +145,9 @@
  '(truncate-partial-width-windows nil)
  '(vline-global-mode nil)
  '(yas/also-auto-indent-first-line t)
- '(yas/prompt-functions (quote (yas/dropdown-prompt yas/x-prompt yas/ido-prompt yas/completing-prompt yas/no-prompt)))
+ '(yas/prompt-functions
+   (quote
+    (yas/dropdown-prompt yas/x-prompt yas/ido-prompt yas/completing-prompt yas/no-prompt)))
  '(yas/trigger-key "s-y")
  '(yas/wrap-around-region t))
 (custom-set-faces
@@ -135,7 +167,7 @@
  '(font-lock-warning-face ((t (:background "black" :foreground "pink" :bold t))))
  '(helm-selection ((((background dark)) (:background "dark olive green" :foreground "white" :underline nil)) (((background light)) (:background "#b5ffd1" :underline nil))))
  '(highlight ((t (:background "slate gray" :underline nil))))
- '(hl-line ((t (:background "black"))))
+ '(hl-line ((t (:background "gray15"))))
  '(ido-only-match ((t (:foreground "medium spring green"))))
  '(ido-subdir ((t (:foreground "cornflower blue"))))
  '(isearch ((t (:background "dark slate blue" :foreground "white"))))
@@ -143,6 +175,8 @@
  '(linum ((t (:foreground "dim gray"))))
  '(magit-header ((t (:inherit header-line :underline t))))
  '(magit-item-highlight ((t (:background "gray10"))))
+ '(mode-line ((t (:background "#d3d7cf" :foreground "#2e3436" :box (:line-width -1 :color "dim gray")))))
+ '(mode-line-inactive ((t (:background "#555753" :foreground "#eeeeec" :box (:line-width -1 :color "dim gray")))))
  '(org-block ((t (:inherit shadow))))
  '(org-block-background ((t (:background "black"))))
  '(org-column ((t (:background "dark slate gray" :strike-through nil :underline nil :slant normal :weight normal :height 110 :family "Consolas"))))
@@ -160,7 +194,7 @@
  '(org-meta-line ((t nil)))
  '(region ((t (:background "gray30"))))
  '(semantic-decoration-on-includes ((t nil)) t)
- '(semantic-decoration-on-unparsed-includes ((t (:background "purple4"))))
+ '(semantic-decoration-on-unparsed-includes ((t (:background "purple4"))) t)
  '(semantic-highlight-func-current-tag-face ((t (:background "gray8"))))
  '(semantic-tag-boundary-face ((t (:overline "dim gray"))))
  '(show-paren-match ((t (:foreground "steelblue3"))))
