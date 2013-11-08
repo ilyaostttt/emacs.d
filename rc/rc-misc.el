@@ -1,4 +1,4 @@
-(set-frame-font "Mono 10" nil t)
+(set-frame-font "Mono 13" nil t)
 
 (setq ace-jump-mode-case-sensitive-search nil)
 
@@ -39,7 +39,6 @@
       mouse-yank-at-point t
       require-final-newline t
       truncate-partial-width-windows nil
-      truncate-lines t
       uniquify-buffer-name-style 'forward
       ffap-machine-p-known 'reject
       whitespace-style '(trailing lines space-before-tab face indentation space-after-tab)
@@ -58,10 +57,6 @@
       write-region-inhibit-fsync t
       stack-trace-on-error t
       x-select-enable-clipboard t)
-
-(custom-set-variables
- '(truncate-lines t)
- '(truncate-partial-width-windows nil))
 
 (show-paren-mode 1)
 
