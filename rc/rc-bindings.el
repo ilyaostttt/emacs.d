@@ -119,9 +119,8 @@
 (global-set-key (kbd "s-m") 'helm-mini)
 (global-set-key (kbd "s-b") 'helm-bookmarks)
 (global-set-key (kbd "s-o") 'helm-occur)
-(global-set-key (kbd "s-s") 'helm-semantic)
+(global-set-key (kbd "s-e") 'helm-semantic)
 
-(global-set-key (kbd "s-e") 'helm-c-etags-select)
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
 (global-set-key (kbd "s-:") 'helm-complex-command-history)
 (global-set-key (kbd "M-g s") 'helm-do-grep)
@@ -185,8 +184,15 @@
 (global-set-key (kbd "s-c f") 'ascope-find-global-definition)
 (global-set-key (kbd "s-c F") 'ascope-find-functions-calling-this-function)
 (global-set-key (kbd "s-c s") 'ascope-find-this-symbol)
+(global-set-key (kbd "s-s") '(lambda ()
+			       (interactive)
+			       (if (boundp 'find-tag-marker-ring)
+				   (ring-insert find-tag-marker-ring (point-marker)))
+			       (ascope-find-this-symbol (thing-at-point 'symbol))))
+
 (global-set-key (kbd "s-c a") 'ascope-all-symbol-assignments)
 (global-set-key (kbd "s-c u") 'ascope-pop-mark)
+
 ;;;;;;;;;;;;;;;;;
 
 (provide 'rc-bindings)

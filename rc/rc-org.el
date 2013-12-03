@@ -11,4 +11,8 @@
         ("j" "Journal" entry (file+datetree (concat org-directory "journal.org"))
          "* %?\n%U\n")))
 
+(setq org-todo-keywords
+      '((sequence "TODO" "FEEDBACK" "|" "DONE" "CANCELLED")))
+
+
 (provide 'rc-org)

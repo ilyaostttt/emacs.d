@@ -1,4 +1,4 @@
-(set-frame-font "Mono 13" nil t)
+(set-frame-font "Mono 11" nil t)
 
 (setq ace-jump-mode-case-sensitive-search nil)
 
