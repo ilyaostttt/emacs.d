@@ -137,4 +137,9 @@
 
 (require 'ascope)
 
+(setq shell-file-name "bash")
+(setq shell-command-switch "-lc")
+
+(require 'p4-commands)
+
 (provide 'rc-misc)
