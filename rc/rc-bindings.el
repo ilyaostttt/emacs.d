@@ -195,4 +195,21 @@
 
 ;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;;;;;;; my-highlight
+(global-set-key (kbd "s-i") 'my-highlight-current-word)
+(global-set-key (kbd "s-I") 'my-unhighlight-all)
+;;;;;;;;;;;;;;;;;;;;
+
+(global-set-key (kbd "s-n") 'my-search-current-word-forward)
+(global-set-key (kbd "s-N") 'my-search-current-word-backward)
+
+(global-set-key (kbd "s-a") (lambda ()
+			      (interactive)
+			      (ack-and-a-half-run "~/p4work/bbic3_main" t
+						  (thing-at-point 'symbol)
+						  "-w"
+						  "--ignore-dir=staging"
+						  "--ignore-dir=linux_2.6.30"
+						  "--ignore-dir=generated")))
+
 (provide 'rc-bindings)

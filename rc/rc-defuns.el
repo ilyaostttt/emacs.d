@@ -3,7 +3,7 @@
   (indent-region (point-min) (point-max)))
 
 (defun cleanup-buffer ()
-  "Perform a bunch of operations on the whitespace content of a buffer."
+ "Perform a bunch of operations on the whitespace content of a buffer."
   (interactive)
   (indent-buffer)
   (delete-trailing-whitespace))
@@ -72,4 +72,41 @@
       (message "Opening file...")
     (message "Aborting")))
 
+;;;;;;;;;;;;;;;;;;; my-highlight-current-word
+(setq my-highlight-table (make-hash-table :test 'equal))
+
+(defface my-highlight-face
+  '((t :background "#607b8b" :foreground "white" :bold t))
+       "Face for highlighting."
+       :group 'basic-faces)
+
+(defun my-highlight-current-word ()
+  (interactive)
+  (let ((cur-word (concat "\\<" (thing-at-point 'symbol) "\\>")))
+    (if (not (gethash cur-word my-highlight-table))
+	(progn
+	  (puthash cur-word t my-highlight-table)
+	  (highlight-regexp cur-word 'my-highlight-face))
+      (progn
+	(unhighlight-regexp cur-word)
+	(remhash cur-word my-highlight-table)))))
+
+(defun my-unhighlight-all ()
+  (interactive)
+  (maphash (lambda (cur-word val)
+	     (unhighlight-regexp cur-word))
+	   my-highlight-table)
+  (clrhash my-highlight-table))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun my-search-current-word-forward ()
+  (interactive)
+  (search-forward (thing-at-point 'symbol)))
+
+(defun my-search-current-word-backward ()
+  (interactive)
+  (search-backward (thing-at-point 'symbol)))
+
 (provide 'rc-defuns)
+

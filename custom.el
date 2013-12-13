@@ -117,7 +117,6 @@
  '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/c++/4.6")))
  '(semantic-decoration-styles (quote (("semantic-decoration-on-includes" . t) ("semantic-decoration-on-protected-members") ("semantic-decoration-on-private-members") ("semantic-tag-boundary" . t))))
  '(semantic-mode nil)
- '(shell-file-name "/bin/zsh")
  '(show-paren-delay 0.025)
  '(show-paren-mode t)
  '(show-paren-style (quote parenthesis))
