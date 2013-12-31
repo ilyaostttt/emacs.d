@@ -147,7 +147,7 @@ Must end with a newline.")
   (define-key ascope-list-entry-keymap "p" 'ascope-prev-symbol)
   (define-key ascope-list-entry-keymap "q" 'quit-window)
   (define-key ascope-list-entry-keymap " " 'ascope-show-entry-other-window)
-  (define-key ascope-list-entry-keymap (kbd "RET") 'ascope-show-entry-other-window)
+  (define-key ascope-list-entry-keymap (kbd "RET") 'ascope-select-entry-other-window)
   )
 
 
@@ -287,8 +287,10 @@ Must end with a newline.")
 Point is not saved on mark ring."
   (interactive)
   (let ((file (get-text-property (point) 'ascope-file))
-	(line-number (get-text-property (point) 'ascope-line-number)))
-    (ascope-show-entry-internal file line-number nil nil t))
+	(line-number (get-text-property (point) 'ascope-line-number))
+	(window nil))
+    (setq window (ascope-show-entry-internal file line-number nil nil t))
+    window)
   )
 
 (defun ascope-select-entry-other-window-delete-window ()
@@ -302,6 +304,15 @@ Point is not saved on mark ring, at late kill the result window"
 	overlay-arrow-string nil)
   (setq buf (get-buffer ascope-output-buffer-name))
   (delete-window (get-buffer-window buf))
+  )
+
+(defun ascope-select-entry-other-window ()
+  "Display the entry at point in other window.
+Point is not saved on mark ring"
+  (interactive)
+  (let ((window (ascope-show-entry-other-window)))
+    (print window)
+    (select-window window)) 
   )
 
 (defun ascope-next-symbol ()
@@ -348,7 +359,8 @@ Point is not saved on mark ring, at late kill the result window"
 		)
 
 	    (message "No entry found at point."))
-	  ))))
+	  )))
+  window)
 
 
 (defun ascope-buffer-search (do-symbol do-next)
