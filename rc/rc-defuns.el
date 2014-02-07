@@ -108,5 +108,18 @@
   (interactive)
   (search-backward (thing-at-point 'symbol)))
 
+(defun my-toggle-writable ()
+  (interactive)
+  (let ((cur-mode (file-modes (buffer-file-name))))
+   (if (/= (logand
+	    cur-mode
+	    #o200)
+	   0)
+       (set-file-modes (buffer-file-name)
+		       (logand cur-mode (lognot #o200)))
+     (set-file-modes (buffer-file-name)
+		     (logior cur-mode #o200))))
+  (revert-buffer nil t))
+
 (provide 'rc-defuns)
 

@@ -212,4 +212,12 @@
 						  "--ignore-dir=linux_2.6.30"
 						  "--ignore-dir=generated")))
 
+(global-set-key (kbd "M-n") '(lambda ()
+			       (interactive)
+			       (scroll-up-command 3)))
+
+(global-set-key (kbd "M-p") '(lambda ()
+			       (interactive)
+			       (scroll-down-command 3)))
+
 (provide 'rc-bindings)

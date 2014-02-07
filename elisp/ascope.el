@@ -311,7 +311,6 @@ Point is not saved on mark ring, at late kill the result window"
 Point is not saved on mark ring"
   (interactive)
   (let ((window (ascope-show-entry-other-window)))
-    (print window)
     (select-window window)) 
   )
 
