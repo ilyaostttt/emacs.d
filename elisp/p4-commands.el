@@ -1,4 +1,4 @@
-(setq p4-root-dir "/home/ilya/p4work/bbic3_main/")
+;; (setq p4-root-dir "/home/ilya/p4work/bbic3_main/")
 
 (defun p4-command-current-file (command)
   (if (string-prefix-p p4-root-dir (buffer-file-name))

@@ -1,14 +1,10 @@
 (global-set-key (kbd "M-%" ) 'query-replace-regexp)
-(global-set-key (kbd "s-r" ) 'query-replace-regexp)
 (global-set-key (kbd "C-M-h" ) 'backward-kill-word)
 (global-set-key (kbd "M-/"   ) 'hippie-expand)
 (global-set-key (kbd "C-z"   ) 'undo)
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
 (global-set-key (kbd "C-x C-k RET") 'ido-kill-buffer)
-(global-set-key (kbd "s-K") '(lambda ()
-                               (interactive)
-                               (kill-buffer nil)))
 
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
@@ -69,11 +65,6 @@
 
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings 'super))
-
-(global-set-key (kbd "s-k") 'windmove-up)
-(global-set-key (kbd "s-j") 'windmove-down)
-(global-set-key (kbd "s-l") 'windmove-right)
-(global-set-key (kbd "s-h") 'windmove-left)
 
 (global-set-key (kbd "M-#") 'er/expand-region)
 
@@ -154,8 +145,7 @@
           (lambda ()
             (local-set-key (kbd "f") 'find-dired)
             (local-set-key (kbd "e") 'find-grep)
-            (local-set-key (kbd "s-u") 'dired-up-directory)
-            (local-set-key (kbd "M-u") 'dired-unmark)
+            (local-set-key (kbd "M-u") 'dired-up-directory)
             ))
 
 ;;;;;;;;;;;;;;;; hs
@@ -166,51 +156,6 @@
 
 (add-hook 'hs-show-hook '(lambda ()
                           (setq hs-all-hidden nil)))
-
-(global-set-key (kbd "s-a") '(lambda ()
-                               (interactive)
-                               (if hs-all-hidden
-                                   (hs-show-all)
-                                 (hs-hide-all))))
-;;;;;;;;;;;;;;;;;
-
-(global-set-key (kbd "s-u") 'auto-complete)
-(global-set-key (kbd "s-z") 'repeat)
-
-;;;;;;;;;;;;;;;;; ascope
-(define-prefix-command 'my-ascope-map)
-(global-set-key (kbd "s-c") 'my-ascope-map)
-(global-set-key (kbd "s-c i") 'ascope-init)
-(global-set-key (kbd "s-c f") 'ascope-find-global-definition)
-(global-set-key (kbd "s-c F") 'ascope-find-functions-calling-this-function)
-(global-set-key (kbd "s-c s") 'ascope-find-this-symbol)
-(global-set-key (kbd "s-s") '(lambda ()
-			       (interactive)
-			       (if (boundp 'find-tag-marker-ring)
-				   (ring-insert find-tag-marker-ring (point-marker)))
-			       (ascope-find-this-symbol (thing-at-point 'symbol))))
-
-(global-set-key (kbd "s-c a") 'ascope-all-symbol-assignments)
-(global-set-key (kbd "s-c u") 'ascope-pop-mark)
-
-;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;; my-highlight
-(global-set-key (kbd "s-i") 'my-highlight-current-word)
-(global-set-key (kbd "s-I") 'my-unhighlight-all)
-;;;;;;;;;;;;;;;;;;;;
-
-(global-set-key (kbd "s-n") 'my-search-current-word-forward)
-(global-set-key (kbd "s-N") 'my-search-current-word-backward)
-
-(global-set-key (kbd "s-a") (lambda ()
-			      (interactive)
-			      (ack-and-a-half-run "~/p4work/bbic3_main" t
-						  (thing-at-point 'symbol)
-						  "-w"
-						  "--ignore-dir=staging"
-						  "--ignore-dir=linux_2.6.30"
-						  "--ignore-dir=generated")))
 
 (global-set-key (kbd "M-n") '(lambda ()
 			       (interactive)

@@ -1,6 +1,6 @@
 (if (equal (system-name) "ilya-ThinkPad-X230")
     (set-frame-font "Mono 10" nil t)
-  (set-frame-font "Mono 11" nil t))
+  (set-frame-font "Mono 10" nil t))
 
 (setq ace-jump-mode-case-sensitive-search nil)
 
@@ -96,8 +96,6 @@
 (setq recentf-max-saved-items 50) ; 50 files ought to be enough.
 
 (setq reb-re-syntax 'string)
-
-(require 'mark-more-like-this)
 
 (setq byte-compile-debug t)
 
