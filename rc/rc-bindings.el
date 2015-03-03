@@ -107,14 +107,11 @@
 
 
 ;;;;;;;;;;;;;;;;;;; helm
-(global-set-key (kbd "s-m") 'helm-mini)
-(global-set-key (kbd "s-b") 'helm-bookmarks)
-(global-set-key (kbd "s-o") 'helm-occur)
-(global-set-key (kbd "s-e") 'helm-semantic)
+(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-c m") 'helm-bookmarks)
+(global-set-key (kbd "C-c o") 'helm-occur)
 
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
-(global-set-key (kbd "s-:") 'helm-complex-command-history)
-(global-set-key (kbd "M-g s") 'helm-do-grep)
 (global-set-key (kbd "C-c C-f") 'helm-find-files)
 ;;;;;;;;;;;;;;;;;;;
 

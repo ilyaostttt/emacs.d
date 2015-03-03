@@ -1,7 +1,4 @@
-(if (equal (system-name) "ilya-ThinkPad-X230")
-    (set-frame-font "Mono 10" nil t)
-  (set-frame-font "Mono 10" nil t))
-
+(set-frame-font "Mono 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
 (require 'uniquify)
