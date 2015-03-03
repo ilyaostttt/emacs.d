@@ -120,17 +120,6 @@
 (global-set-key (kbd "C-x C-n") 'narrow-to-defun)
 
 
-;;;;;;;;;;;;;;;;; mark multiple
-(global-set-key (kbd "C-<") 'mark-previous-like-this)
-(global-set-key (kbd "C->") 'mark-next-like-this)
-(global-set-key (kbd "s-,") 'mark-previous-like-this)
-(global-set-key (kbd "s-.") 'mark-next-like-this)
-(global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
-(global-set-key (kbd "C-*") 'mark-all-like-this)
-(global-set-key (kbd "s-8") 'mark-all-like-this)
-;;;;;;;;;;;;;;;;;;;
-
-
 ;; get rid of `find-file-read-only' and replace it with something more useful.
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
 
