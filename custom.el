@@ -149,4 +149,5 @@
  '(mode-line ((t (:background "grey75" :foreground "black"))))
  '(mode-line-buffer-id ((t (:weight bold))))
  '(mode-line-highlight ((t (:background "gray" :foreground "black" :box nil))))
- '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil)))))
+ '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil))))
+ '(modeline-inactive ((t (:background "grey93" :foreground "grey20" :box nil))) t))
