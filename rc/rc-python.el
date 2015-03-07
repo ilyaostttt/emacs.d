@@ -7,7 +7,6 @@
 (require 'python-mode)
 
 (add-hook 'python-mode-hook
-          (lambda ()
-	    (linum-mode 1)))
+          (lambda ()))
 
 (provide 'rc-python)

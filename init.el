@@ -32,14 +32,12 @@
 
 (require 'rc-misc)
 (require 'rc-defuns)
-(require 'rc-yasnippet)
 (require 'rc-org)
 (require 'rc-registers)
 (require 'rc-lisp)
 (require 'rc-c-mode)
 (require 'rc-dired)
 (require 'rc-bindings)
-(require 'rc-ede)
 (require 'rc-python)
 (require 'rc-qtn)
 

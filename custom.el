@@ -31,15 +31,6 @@
  '(dired-omit-extensions (quote (".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".dfsl" ".pfsl" ".d64fsl" ".p64fsl" ".lx64fsl" ".lx32fsl" ".dx64fsl" ".dx32fsl" ".fx64fsl" ".fx32fsl" ".sx64fsl" ".sx32fsl" ".wx64fsl" ".wx32fsl" ".fasl" ".ufsl" ".fsl" ".dxl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".idx" ".lof" ".lot" ".glo" ".blg" ".bbl" ".cp" ".cps" ".fn" ".fns" ".ky" ".kys" ".pg" ".pgs" ".tp" ".tps" ".vr" ".org_archive" ".vrs")))
  '(dired-omit-files "^\\..*$\\|^\\.?#\\|^\\.$\\|^\\.\\.$\\|GPATH\\|GRTAGS\\|GSYMS\\|GTAGS")
  '(dired-recursive-copies (quote always))
- '(ecb-compile-window-height 12)
- '(ecb-layout-name "left9")
- '(ecb-layout-window-sizes nil)
- '(ecb-options-version "2.40")
- '(ecb-split-edit-window-after-start nil)
- '(ecb-tip-of-the-day nil)
- '(ecb-toggle-layout-sequence (quote ("mylayout1" "left14")))
- '(ecb-tree-buffer-style (quote image))
- '(ecb-windows-width 0.25)
  '(ediff-merge-split-window-function (quote split-window-vertically))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(electric-indent-mode nil)
@@ -51,13 +42,6 @@
  '(global-auto-revert-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode nil)
- '(global-semantic-decoration-mode t)
- '(global-semantic-highlight-func-mode t)
- '(global-semantic-idle-completions-mode nil nil (semantic/idle))
- '(global-semantic-idle-local-symbol-highlight-mode t nil (semantic/idle))
- '(global-semantic-idle-scheduler-mode nil)
- '(global-semantic-idle-summary-mode t)
- '(global-semanticdb-minor-mode t)
  '(grep-command "grep -nH -e ")
  '(grep-find-command (quote ("find . -type f -exec grep -nHI -e  {} +" . 35)))
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".tmp" "staging")))
@@ -105,12 +89,7 @@
  '(org-pretty-entities-include-sub-superscripts nil)
  '(org-src-fontify-natively t)
  '(org-startup-truncated nil)
-<<<<<<< HEAD
- '(overflow-newline-into-fringe nil)
-=======
  '(overflow-newline-into-fringe t)
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
->>>>>>> 65124099af665299831de2e9e714baa1153b56bd
  '(quack-default-program "racket")
  '(recentf-exclude (quote (".*/.gvfs/.*")))
  '(recentf-max-saved-items 30)
@@ -119,33 +98,22 @@
  '(scroll-all-mode nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 100000)
- '(semantic-c-dependency-system-include-path (quote ("/usr/include" "/usr/include/c++/4.6")))
- '(semantic-decoration-styles (quote (("semantic-decoration-on-includes" . t) ("semantic-decoration-on-protected-members") ("semantic-decoration-on-private-members") ("semantic-tag-boundary" . t))))
- '(semantic-mode nil)
  '(shell-file-name "zsh")
  '(show-paren-delay 0.025)
  '(show-paren-mode t)
  '(show-paren-style (quote parenthesis))
- '(sr-speedbar-skip-other-window-p t)
- '(sr-speedbar-width-x 32)
  '(tool-bar-mode nil)
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
  '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow)))
  '(vline-global-mode nil)
- '(word-wrap nil)
- '(yas/also-auto-indent-first-line t)
- '(yas/prompt-functions (quote (yas/dropdown-prompt yas/x-prompt yas/ido-prompt yas/completing-prompt yas/no-prompt)))
- '(yas/trigger-key "s-y")
- '(yas/wrap-around-region t))
+ '(word-wrap nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bm-face ((t (:background "dark slate gray"))))
- '(ecb-history-face ((t (:inherit ecb-default-highlight-face))))
- '(ecb-method-face ((t (:inherit ecb-default-highlight-face))))
  '(font-lock-warning-face ((t (:background "black" :foreground "pink" :bold t))))
  '(fringe ((t (:background "white smoke"))))
  '(hl-line ((t (:background "white smoke"))))
@@ -155,9 +123,5 @@
  '(mode-line ((t (:background "grey75" :foreground "black"))))
  '(mode-line-buffer-id ((t (:weight bold))))
  '(mode-line-highlight ((t (:background "gray" :foreground "black" :box nil))))
-<<<<<<< HEAD
- '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil)))))
-=======
- '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil))))
  '(modeline-inactive ((t (:background "grey93" :foreground "grey20" :box nil))) t))
->>>>>>> 65124099af665299831de2e9e714baa1153b56bd
+

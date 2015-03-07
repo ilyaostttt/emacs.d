@@ -1,7 +1,7 @@
 (set-frame-font "Mono 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
-(require 'package) ;; You might already have this line
+(require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
@@ -12,13 +12,6 @@
 (smex-initialize)
 
 (require 'auto-complete-config)
-(defun ac-cc-mode-setup ()
-  (setq ac-sources
-	(append '(
-		  ac-source-yasnippet
-		  ac-source-semantic
-		  )
-		ac-sources)))
 (ac-config-default)
 
 (setq
