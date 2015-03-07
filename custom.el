@@ -72,6 +72,7 @@
  '(ido-max-prospects 10)
  '(ido-mode (quote both) nil (ido))
  '(ido-use-filename-at-point (quote guess))
+ '(indicate-buffer-boundaries nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
  '(initial-scratch-message "")
@@ -104,7 +105,12 @@
  '(org-pretty-entities-include-sub-superscripts nil)
  '(org-src-fontify-natively t)
  '(org-startup-truncated nil)
+<<<<<<< HEAD
  '(overflow-newline-into-fringe nil)
+=======
+ '(overflow-newline-into-fringe t)
+ '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
+>>>>>>> 65124099af665299831de2e9e714baa1153b56bd
  '(quack-default-program "racket")
  '(recentf-exclude (quote (".*/.gvfs/.*")))
  '(recentf-max-saved-items 30)
@@ -125,6 +131,7 @@
  '(tool-bar-mode nil)
  '(truncate-lines t)
  '(truncate-partial-width-windows nil)
+ '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow)))
  '(vline-global-mode nil)
  '(word-wrap nil)
  '(yas/also-auto-indent-first-line t)
@@ -148,4 +155,9 @@
  '(mode-line ((t (:background "grey75" :foreground "black"))))
  '(mode-line-buffer-id ((t (:weight bold))))
  '(mode-line-highlight ((t (:background "gray" :foreground "black" :box nil))))
+<<<<<<< HEAD
  '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil)))))
+=======
+ '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil))))
+ '(modeline-inactive ((t (:background "grey93" :foreground "grey20" :box nil))) t))
+>>>>>>> 65124099af665299831de2e9e714baa1153b56bd

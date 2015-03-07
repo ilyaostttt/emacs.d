@@ -26,15 +26,17 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (define-key global-map "\C-cc" 'org-capture)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(global-set-key (kbd "C-c v") 'visit-tags-table)
+(global-set-key (kbd "C-c i") 'ascope-init)
+(global-set-key (kbd "C-c f") 'ascope-find-this-symbol)
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x m") 'eshell)
 
 (add-hook 'org-mode-hook
           (lambda ()
-            (define-key org-mode-map (kbd "C-c o s") 'org-time-stamp)
-            (define-key org-mode-map (kbd "C-c o m") 'org-insert-heading-respect-content)
-            (define-key org-mode-map (kbd "C-c o p") 'org-priority)))
+            (define-key org-mode-map (kbd "C-c s") 'org-time-stamp)
+	    ))
 
 (global-set-key (kbd "C-x C-z") 'nil)
 (global-set-key (kbd "C-x C-c") 'nil)
