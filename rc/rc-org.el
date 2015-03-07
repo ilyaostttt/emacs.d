@@ -14,5 +14,9 @@
 (setq org-todo-keywords
       '((sequence "TODO" "FEEDBACK" "|" "DONE" "CANCELLED")))
 
+(setq org-directory "~/org")
+(setq org-agenda-files `(,org-directory))
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+
 
 (provide 'rc-org)

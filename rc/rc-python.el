@@ -8,9 +8,6 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
-            ;; (highlight-indentation)
-            (common-prog-mode)
-            (pretty-sigma)
-            (local-set-key  (kbd "s-v") 'vline-mode)))
+	    (linum-mode 1)))
 
 (provide 'rc-python)

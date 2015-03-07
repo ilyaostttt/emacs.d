@@ -1,21 +1,24 @@
 (set-frame-font "Mono 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
-(require 'uniquify)
-(require 'expand-region)
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
+(require 'xcscope)
+(cscope-setup)
 
 (require 'smex)
 (smex-initialize)
 
 (require 'auto-complete-config)
- (defun ac-cc-mode-setup ()
-   (setq ac-sources
-         (append '(
-                   ac-source-yasnippet
-                   ac-source-gtags
-                   ac-source-semantic
-                   )
-                 ac-sources)))
+(defun ac-cc-mode-setup ()
+  (setq ac-sources
+	(append '(
+		  ac-source-yasnippet
+		  ac-source-semantic
+		  )
+		ac-sources)))
 (ac-config-default)
 
 (setq
@@ -29,7 +32,6 @@
       dired-dwim-target t
       dired-recursive-copies 'always
       visible-bell nil
-      fringe-mode (cons 4 0)
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
       inhibit-startup-message t
@@ -47,19 +49,12 @@
       inhibit-startup-screen t
       initial-scratch-message ""
       make-backup-files nil
-      package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/")))
-      scroll-bar-mode nil
-      show-paren-delay 0.025
       show-paren-mode t
-      show-paren-style (quote parenthesis)
-      tool-bar-mode nil
       write-region-inhibit-fsync t
       stack-trace-on-error t
       x-select-enable-clipboard t)
 
 (show-paren-mode 1)
-
-(set-face-attribute 'show-paren-match nil :foreground "steelblue3" :background "grey14")
 
 (ido-mode t)
 (setq ido-enable-prefix nil
@@ -83,8 +78,6 @@
 
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
-(global-ede-mode t)
-
 (setq cua-enable-cua-keys nil) ;; only for rectangles
 (cua-mode t)
 
@@ -96,22 +89,11 @@
 
 (setq byte-compile-debug t)
 
-(add-hook 'ace-jump-mode-before-jump-hook
-             (lambda () (push-mark (point) t))) ;until it's fixed in Maramalade
-
 (require 'helm)
-
-(require 'ascope)
 
 (setq shell-file-name "bash")
 (setq shell-command-switch "-lc")
 
 (require 'p4-commands)
-
-(require 'ack-and-a-half)
-(defalias 'ack 'ack-and-a-half)
-(defalias 'ack-same 'ack-and-a-half-same)
-(defalias 'ack-find-file 'ack-and-a-half-find-file)
-(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
 (provide 'rc-misc)
