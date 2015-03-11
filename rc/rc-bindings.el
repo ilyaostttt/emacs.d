@@ -30,6 +30,7 @@
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x m") 'eshell)
+(global-set-key (kbd "C-c e") 'eshell)
 
 (add-hook 'org-mode-hook
           (lambda ()
