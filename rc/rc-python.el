@@ -7,10 +7,6 @@
 (require 'python-mode)
 
 (add-hook 'python-mode-hook
-          (lambda ()
-            ;; (highlight-indentation)
-            (common-prog-mode)
-            (pretty-sigma)
-            (local-set-key  (kbd "s-v") 'vline-mode)))
+          (lambda ()))
 
 (provide 'rc-python)
