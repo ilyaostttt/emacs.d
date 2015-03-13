@@ -1,6 +1,8 @@
 (set-frame-font "Mono 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
+(set-default 'cursor-type 'bar)
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
