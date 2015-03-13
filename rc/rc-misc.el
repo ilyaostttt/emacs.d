@@ -91,4 +91,9 @@
 
 (require 'p4-commands)
 
+(add-hook 'eshell-mode-hook
+	  '(lambda ()
+	     (setq eshell-path-env (concat "/usr/local/bin:" (getenv "HOME") "/src/scripts:"  eshell-path-env))
+	     (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))))
+
 (provide 'rc-misc)
