@@ -78,4 +78,7 @@
 			       (interactive)
 			       (scroll-down-command 3)))
 
+
+(global-set-key (kbd "C-c g") 'find-grep)
+
 (provide 'rc-bindings)
