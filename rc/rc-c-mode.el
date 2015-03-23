@@ -1,5 +1,6 @@
 (add-hook 'c-mode-common-hook (lambda ()
-                                ;; (semantic-initialize)
-                                ))
+				;; (semantic-initialize)
+				(whitespace-mode)
+				))
 
 (provide 'rc-c-mode)
