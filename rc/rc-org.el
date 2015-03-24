@@ -1,5 +1,4 @@
 (require 'org)
-(require 'org-mobile)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file (concat org-directory "inbox.org"))
@@ -14,9 +13,8 @@
 (setq org-todo-keywords
       '((sequence "TODO" "FEEDBACK" "|" "DONE" "CANCELLED")))
 
-(setq org-directory "~/org")
+(setq org-directory "~/notes")
 (setq org-agenda-files `(,org-directory))
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-
+(setq org-default-notes-file (concat org-directory "/inbox.org"))
 
 (provide 'rc-org)
