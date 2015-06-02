@@ -7,7 +7,9 @@
                                 ;; (semantic-initialize)
                                 ))
 
-;; (setq-default show-trailing-whitespace t)
+(setq-default show-trailing-whitespace t)
+
+(highlight-lines-matching-regexp ".\{101\}" "hi-green-b")
 
 (set-default 'indent-tabs-mode t)
 
