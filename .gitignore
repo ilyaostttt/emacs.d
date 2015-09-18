@@ -21,3 +21,4 @@ url/
 *.orig
 .bm-repository
 recentf
+elpa/*
