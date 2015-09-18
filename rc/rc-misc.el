@@ -1,7 +1,5 @@
-(set-frame-font "Mono 10" nil t)
+(set-frame-font "Monospace 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
-
-(set-default 'cursor-type 'bar)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -9,6 +7,10 @@
 
 (require 'xcscope)
 (cscope-setup)
+
+(add-hook 'after-init-hook
+	  (lambda ()
+	    (load-theme 'sanityinc-tomorrow-eighties)))
 
 (require 'smex)
 (smex-initialize)
