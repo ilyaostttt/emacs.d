@@ -24,7 +24,7 @@
  '(cua-keep-region-after-copy nil)
  '(cua-normal-cursor-color "black")
  '(cursor-in-non-selected-windows nil)
- '(custom-safe-themes (quote ("baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "6f09addffc3de43dfac54697af27b8fb98c6ebd75234d43918b469e66056d3ff" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
+ '(custom-safe-themes (quote ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "6f09addffc3de43dfac54697af27b8fb98c6ebd75234d43918b469e66056d3ff" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
  '(debug-on-signal t)
  '(default-input-method "russian-computer")
  '(dired-dwim-target t)
@@ -107,24 +107,30 @@
  '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
  '(vline-global-mode nil)
  '(word-wrap t))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(bm-face ((t (:background "dark slate gray"))))
+;;  '(font-lock-warning-face ((t (:background "black" :foreground "pink" :bold t))))
+;;  '(fringe ((t (:background "white smoke"))))
+;;  '(helm-selection ((t (:inherit highlight))))
+;;  '(hl-line ((t (:background "floral white"))))
+;;  '(linum ((t (:inherit (shadow default) :background "white smoke"))))
+;;  '(magit-header ((t (:inherit header-line :underline t))))
+;;  '(minibuffer-prompt ((t (:foreground "medium blue"))))
+;;  '(mode-line ((t (:background "grey75" :foreground "black"))))
+;;  '(mode-line-buffer-id ((t (:weight bold))))
+;;  '(mode-line-highlight ((t (:background "gray" :foreground "black" :box nil))))
+;;  '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil))))
+;;  '(org-block ((t (:foreground "dark slate blue"))))
+;;  '(org-meta-line ((t (:foreground "gray"))))
+;;  '(org-verbatim ((t (:foreground "dark slate gray"))))
+;;  '(region ((t (:background "gtk_selection_bg_color")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(bm-face ((t (:background "dark slate gray"))))
- '(font-lock-warning-face ((t (:background "black" :foreground "pink" :bold t))))
- '(fringe ((t (:background "white smoke"))))
- '(helm-selection ((t (:inherit highlight))))
- '(hl-line ((t (:background "floral white"))))
- '(linum ((t (:inherit (shadow default) :background "white smoke"))))
- '(magit-header ((t (:inherit header-line :underline t))))
- '(minibuffer-prompt ((t (:foreground "medium blue"))))
- '(mode-line ((t (:background "grey75" :foreground "black"))))
- '(mode-line-buffer-id ((t (:weight bold))))
- '(mode-line-highlight ((t (:background "gray" :foreground "black" :box nil))))
- '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil))))
- '(org-block ((t (:foreground "dark slate blue"))))
- '(org-meta-line ((t (:foreground "gray"))))
- '(org-verbatim ((t (:foreground "dark slate gray"))))
- '(region ((t (:background "gtk_selection_bg_color")))))
+ )

@@ -1,8 +1,6 @@
 (set-frame-font "Mono 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
-(set-default 'cursor-type 'bar)
-
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -89,7 +87,7 @@
 (setq shell-file-name "bash")
 (setq shell-command-switch "-lc")
 
-(require 'p4-commands)
+(require 'rc-p4)
 
 (add-hook 'eshell-mode-hook
 	  '(lambda ()

@@ -4,13 +4,12 @@
 
 (add-hook 'c-mode-common-hook (lambda ()
 				(setq show-trailing-whitespace t)
-                                ;; (semantic-initialize)
-                                ))
+				(setq 'indent-tabs-mode t)
+				;; (semantic-initialize)
+				))
 
 (setq-default show-trailing-whitespace t)
 
 (highlight-lines-matching-regexp ".\{101\}" "hi-green-b")
-
-(set-default 'indent-tabs-mode t)
 
 (provide 'rc-qtn)
