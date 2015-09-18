@@ -45,12 +45,12 @@
  '(fringe-mode (quote (0 . 8)) nil (fringe))
  '(gdb-many-windows t)
  '(global-auto-revert-mode t)
- '(global-hl-line-mode t)
+ '(global-hl-line-mode nil)
  '(global-linum-mode nil)
  '(grep-command "grep -nH -e ")
  '(grep-find-command (quote ("find . -type f -exec grep -nHI -e  {} +" . 35)))
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".tmp" "staging")))
- '(grep-find-ignored-files (quote (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.out" "*TAGS" ".tags" "tags")))
+ '(grep-find-ignored-files (quote (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.out" "TAGS" ".tags" "tags")))
  '(grep-find-template "find . <X> -type f <F> -exec grep <C> -nHIw -e <R> {} +")
  '(grep-highlight-matches (quote auto))
  '(grep-template "grep <X> <C> -nH -e <R> <F>")
@@ -115,6 +115,27 @@
  '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
  '(vline-global-mode nil)
  '(word-wrap t))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(bm-face ((t (:background "dark slate gray"))))
+;;  '(font-lock-warning-face ((t (:background "black" :foreground "pink" :bold t))))
+;;  '(fringe ((t (:background "white smoke"))))
+;;  '(helm-selection ((t (:inherit highlight))))
+;;  '(hl-line ((t (:background "floral white"))))
+;;  '(linum ((t (:inherit (shadow default) :background "white smoke"))))
+;;  '(magit-header ((t (:inherit header-line :underline t))))
+;;  '(minibuffer-prompt ((t (:foreground "medium blue"))))
+;;  '(mode-line ((t (:background "grey75" :foreground "black"))))
+;;  '(mode-line-buffer-id ((t (:weight bold))))
+;;  '(mode-line-highlight ((t (:background "gray" :foreground "black" :box nil))))
+;;  '(mode-line-inactive ((t (:background "gainsboro" :foreground "grey20" :box nil))))
+;;  '(org-block ((t (:foreground "dark slate blue"))))
+;;  '(org-meta-line ((t (:foreground "gray"))))
+;;  '(org-verbatim ((t (:foreground "dark slate gray"))))
+;;  '(region ((t (:background "gtk_selection_bg_color")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -91,11 +91,14 @@
 (setq shell-file-name "bash")
 (setq shell-command-switch "-lc")
 
-(require 'p4-commands)
+(require 'rc-p4)
 
 (add-hook 'eshell-mode-hook
 	  '(lambda ()
 	     (setq eshell-path-env (concat "/usr/local/bin:" (getenv "HOME") "/src/scripts:"  eshell-path-env))
 	     (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))))
+
+(require 'fill-column-indicator)
+(setq fci-fill-column 100)
 
 (provide 'rc-misc)
