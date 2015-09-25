@@ -39,7 +39,6 @@
 (require 'rc-dired)
 (require 'rc-bindings)
 (require 'rc-python)
-(require 'rc-qtn)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (load custom-file 'noerror)
