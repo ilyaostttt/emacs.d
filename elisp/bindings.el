@@ -79,7 +79,6 @@
 			       (interactive)
 			       (scroll-down-command 3)))
 
-
-(global-set-key (kbd "C-c g") 'find-grep)
+(global-set-key (kbd "C-c g") 'rgrep)
 
 (provide 'bindings)
