@@ -43,7 +43,7 @@
  '(global-hl-line-mode nil)
  '(global-linum-mode nil)
  '(grep-command "grep -nH -e ")
- '(grep-find-command (quote ("find . -type f -exec grep -nHI -e  {} +" . 35)))
+ '(grep-find-command (quote ("~/.emacs.d/tools/find_grep " . 28)))
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".tmp" "staging")))
@@ -147,3 +147,9 @@
  '(visual-line-fringe-indicators (quote (nil right-curly-arrow)))
  '(word-wrap t))
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
