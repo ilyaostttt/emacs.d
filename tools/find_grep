@@ -5,4 +5,5 @@ find . -type f \
      ! -name System.map \
      ! -name '*o.cmd'	\
      ! -name '.tmp_System.map'	\
+     ! -name Module.symvers \
      -exec grep -nHI -e $@ {} +
