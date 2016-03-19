@@ -6,4 +6,6 @@ find . -type f \
      ! -name '*o.cmd'	\
      ! -name '.tmp_System.map'	\
      ! -name Module.symvers \
+     ! -name tags \
+     ! -name TAGS \
      -exec grep -nHI -e $@ {} +
