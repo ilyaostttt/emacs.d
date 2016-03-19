@@ -22,3 +22,4 @@ url/
 .bm-repository
 recentf
 elpa/*
+site-lisp/

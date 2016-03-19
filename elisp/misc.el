@@ -1,6 +1,6 @@
 (global-hi-lock-mode 1)
 
-(set-frame-font "Monospace 11" nil t)
+(set-frame-font "Consolas 10" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
 (require 'package)
@@ -9,10 +9,6 @@
 
 (require 'xcscope)
 (cscope-setup)
-
-(add-hook 'after-init-hook
-	  (lambda ()
-	    (load-theme 'sanityinc-tomorrow-eighties)))
 
 (require 'smex)
 (smex-initialize)
