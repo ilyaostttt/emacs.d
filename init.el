@@ -15,6 +15,7 @@
 (package-install 'highlight-indentation)
 (package-install 'python-mode)
 (package-install 'magit)
+(package-install 'p4)
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
@@ -48,6 +49,7 @@
 (require 'dired-setup)
 (require 'bindings)
 (require 'python)
+(require 'p4-conf)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (load custom-file 'noerror)
