@@ -16,6 +16,8 @@
 (package-install 'python-mode)
 (package-install 'magit)
 (package-install 'p4)
+(package-install 'markdown-mode)
+(package-install 'markdown-mode+)
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
