@@ -8,4 +8,4 @@ find . -type f \
      ! -name Module.symvers \
      ! -name tags \
      ! -name TAGS \
-     -exec grep -nHI -e $@ {} +
+     -exec grep -nHI -e "$*" {} +
