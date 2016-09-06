@@ -81,4 +81,6 @@
 
 (global-set-key (kbd "C-c g") 'grep-find)
 
+(global-set-key (kbd "C-c w") 'whitespace-mode)
+
 (provide 'bindings)
