@@ -13,7 +13,7 @@
 (setq org-todo-keywords
       '((sequence "TODO" "FEEDBACK" "|" "DONE" "CANCELLED")))
 
-(setq org-directory "~/notes")
+(setq org-directory "~/Notes")
 (setq org-agenda-files `(,org-directory))
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 
