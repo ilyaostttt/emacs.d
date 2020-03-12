@@ -9,7 +9,11 @@
  '(blink-cursor-mode t)
  '(blink-matching-paren t)
  '(column-number-mode t)
- '(compilation-read-command nil)
+ '(compilation-environment
+   (quote
+    ("LM_LICENSE_FILE=7434@dari.quantenna.com:28000@licenseserver.quantenna.com:27020@ru-sw-build01.quantenna.com")))
+ '(compilation-read-command t)
+ '(compile-command "")
  '(cua-delete-selection t)
  '(cua-enable-modeline-indications t)
  '(cua-enable-region-auto-help nil)
@@ -37,11 +41,11 @@
  '(exec-path
    (quote
     ("/usr/local/sbin" "/usr/local/bin" "/usr/sbin" "/usr/bin" "/sbin" "/bin" "/usr/games" "/usr/local/games" "/home/iostanin/SW/bin" "/usr/lib/emacs/24.3/x86_64-linux-gnu" "/home/iostanin/src/scripts")))
- '(expand-region-preferred-python-mode (quote fgallina-python))
  '(fci-rule-color "#424242")
  '(fringe-mode (quote (0 . 8)) nil (fringe))
  '(gdb-many-windows t)
  '(global-auto-revert-mode t)
+ '(global-eldoc-mode nil)
  '(global-hl-line-mode nil)
  '(global-linum-mode nil)
  '(grep-command "grep -nH -e ")
@@ -81,6 +85,7 @@
       nil
       ("~/notes/tmp.txt")))))
  '(org-agenda-dim-blocked-tasks t)
+ '(org-agenda-files (quote ("~/Notes/" "~/Notes/Work/" "~/Notes/Personal/")))
  '(org-agenda-prefix-format
    (quote
     ((agenda . " %i %-12:c%?-12t%s %-8e")
@@ -109,10 +114,10 @@
  '(org-src-fontify-natively t)
  '(org-startup-truncated nil)
  '(overflow-newline-into-fringe t)
- '(p4-executable "p4")
+ '(p4-executable "/home/iostanin/bin/p4")
  '(package-selected-packages
    (quote
-    (xcscope smex python-mode paredit highlight-indentation helm)))
+    (markdown-mode+ markdown-mode p4 magit ag helm-ag xcscope smex python-mode paredit highlight-indentation helm)))
  '(recentf-exclude (quote (".*/.gvfs/.*")))
  '(recentf-max-saved-items 30)
  '(remote-shell-program "rsh")
