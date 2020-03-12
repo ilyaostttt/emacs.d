@@ -1,6 +1,6 @@
 (global-hi-lock-mode 1)
 
-(set-frame-font "Monospace 11" nil t)
+(set-frame-font "Fira Code 11" nil t)
 (setq ace-jump-mode-case-sensitive-search nil)
 
 (require 'package)
