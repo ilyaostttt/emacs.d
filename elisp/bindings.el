@@ -32,6 +32,7 @@
 (global-set-key (kbd "C-x m") 'eshell)
 (global-set-key (kbd "C-c e") 'eshell)
 (global-set-key (kbd "C-c t") 'toggle-truncate-lines)
+(global-set-key (kbd "C-c s") 'cscope-find-this-symbol)
 
 (add-hook 'org-mode-hook
           (lambda ()
@@ -79,7 +80,7 @@
 			       (interactive)
 			       (scroll-down-command 3)))
 
-(global-set-key (kbd "C-c g") 'grep-find)
+(global-set-key (kbd "C-c g") 'ag)
 
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 
