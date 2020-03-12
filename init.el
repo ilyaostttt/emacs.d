@@ -2,23 +2,6 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-
-(package-initialize)
-(package-refresh-contents)
-(package-install 'paredit)
-(package-install 'xcscope)
-(package-install 'smex)
-(package-install 'helm)
-(package-install 'highlight-indentation)
-(package-install 'python-mode)
-(package-install 'magit)
-(package-install 'p4)
-(package-install 'markdown-mode)
-(package-install 'markdown-mode+)
-
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
@@ -52,6 +35,8 @@
 (require 'bindings)
 (require 'python)
 (require 'p4-conf)
+
+;; (require 'packages)
 
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (load custom-file 'noerror)
